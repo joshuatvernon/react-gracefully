@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "types": [
+      "enzyme",
+      "enzyme-adapter-react-16",
+      "express",
+      "react",
+      "react-dom",
+      "jest"
+    ],
+    "target": "es5",
+    "module": "commonjs",
+    "jsx": "react",
+    "outDir": "./lib",
+    "strict": true,
+    "declaration": true,
+    "removeComments": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules",
+    "src/setupTests.ts",
+    "src/**/*.test.ts",
+    "src/**/*.test.tsx"
+  ]
+}

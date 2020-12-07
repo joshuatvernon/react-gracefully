@@ -1,0 +1,13 @@
+# Node
+node_modules
+.npm
+
+# Jest
+coverage
+
+# Typescript
+lib
+
+# Eslint
+.eslintcache
+
