@@ -26,3 +26,5 @@ export const Hide: FunctionComponent<HideProps> = (props) => {
     </StyledMedia>
   );
 };
+
+export * from './types';
