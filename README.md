@@ -117,7 +117,7 @@ export const Page = () => {
 
 #### GraceProvider
 
-The `GraceProvider` component is used to setup the **use-gracefully** configuration. It allows custom _breakpoints_ or custom _devices_ to setup.
+The `GraceProvider` component is used to scope and configure **use-gracefully** for the app. It allows custom _breakpoints_ and/or _devices_ to be configured.
 
 ```jsx
 import React from 'react';
@@ -147,7 +147,7 @@ export const App = () => {
 
 #### Show
 
-The `Show` component can be used to show content for specific _breakpoints_ or _devices_. Since it uses media queries under the hood all content is returned from the server to the client and then hidden or shown using css. This means it can be used in server side render apps such as NextJS.
+The `Show` component can be used to show content for specific _breakpoints_ or _devices_. Since it uses media queries under the hood all content is returned from the server to the client and then hidden or shown using css. This means it can be used effectively in server side rendered apps such as [Next.js](https://github.com/vercel/next.js/).
 
 ```jsx
 import React from 'react';
@@ -169,7 +169,7 @@ export const Page = () => {
 
 #### Hide
 
-The `Hide` component can be used to hide content for specific _breakpoints_ or _devices_. Since it uses media queries under the hood all content is returned from the server to the client and then hidden or shown using css. This means it can be used in server side render apps such as NextJS.
+The `Hide` component can be used to hide content for specific _breakpoints_ or _devices_. Since it uses media queries under the hood all content is returned from the server to the client and then hidden or shown using css. This means it can be used effectively in server side rendered apps such as [Next.js](https://github.com/vercel/next.js/).
 
 ```jsx
 import React from 'react';
