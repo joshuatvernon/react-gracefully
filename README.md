@@ -12,41 +12,6 @@ npm install --save react-gracefully
 
 ## Usage
 
-### Express Middleware
-
-#### Default (UserAgent)
-
-The **react-gracefully** express middleware by default will use the `user-agent` to sniff the current device type.
-
-```typescript
-import express from 'express';
-import grace from 'react-gracefully';
-
-const app = express();
-app.use(grace.express());
-```
-
-#### Custom (Headers)
-
-Optionally, **react-gracefully** express middleware can be configured to check custom headers for the current device type.
-
-```typescript
-import express from 'express';
-import grace, { Config, Headers } from 'react-gracefully';
-
-const app = express();
-const config: Config = {
-  devices: {
-    mobile: (headers: Headers) => headers['x-device-type'] === 'mobile',
-    tablet: (headers: Headers) => headers['x-device-type'] === 'tablet',
-    desktop: (headers: Headers) => headers['x-device-type'] === 'desktop',
-    ios: (headers: Headers) => headers['x-device-type'] === 'ios',
-    android: (headers: Headers) => headers['x-device-type'] === 'android'
-  }
-};
-app.use(grace.express(config));
-```
-
 ### Hook
 
 **react-gracefully** exposes the `useGrace` hook to get access to _devices_, _breakpoints_ and _window_ details.
@@ -115,36 +80,6 @@ export const Page = () => {
 
 **react-gracefully** exposes a number of components. These components can be used to setup the configuration or show or hide content server side.
 
-#### GraceProvider
-
-The `GraceProvider` component is used to scope and configure **use-gracefully** for the app. It allows custom _breakpoints_ and/or _devices_ to be configured.
-
-```jsx
-import React from 'react';
-import { GraceProvider } from 'react-gracefully';
-
-export const App = () => {
-  const breakpoints: Breakpoints = {
-    sm: {
-      max: '500px'
-    },
-    md: {
-      min: '500px',
-      max: '1000px'
-    },
-    lg: {
-      min: '1000px'
-    }
-  };
-  const devices = ['mobile', 'ios', 'android', 'tablet', 'desktop'];
-  return (
-    <GraceProvider breakpoints={breakpoints} devices={devices}>
-      <Router />
-    </GraceProvider>
-  );
-};
-```
-
 #### Show
 
 The `Show` component can be used to show content for specific _breakpoints_ or _devices_. Since it uses media queries under the hood all content is returned from the server to the client and then hidden or shown using css. This means it can be used effectively in server side rendered apps such as [Next.js](https://github.com/vercel/next.js/).
@@ -187,6 +122,71 @@ export const Page = () => {
     </div>
   );
 };
+```
+
+#### GraceProvider
+
+The `GraceProvider` component is used to scope and configure **use-gracefully** for the app. It allows custom _breakpoints_ and/or _devices_ to be configured.
+
+```jsx
+import React from 'react';
+import { GraceProvider } from 'react-gracefully';
+
+export const App = () => {
+  const breakpoints: Breakpoints = {
+    sm: {
+      max: '500px'
+    },
+    md: {
+      min: '500px',
+      max: '1000px'
+    },
+    lg: {
+      min: '1000px'
+    }
+  };
+  const devices = ['mobile', 'ios', 'android', 'tablet', 'desktop'];
+  return (
+    <GraceProvider breakpoints={breakpoints} devices={devices}>
+      <Router />
+    </GraceProvider>
+  );
+};
+```
+
+### Express Middleware
+
+#### Default (UserAgent)
+
+The **react-gracefully** express middleware by default will use the `user-agent` to sniff the current device type.
+
+```typescript
+import express from 'express';
+import grace from 'react-gracefully';
+
+const app = express();
+app.use(grace.express());
+```
+
+#### Custom (Headers)
+
+Optionally, **react-gracefully** express middleware can be configured to check custom headers for the current device type.
+
+```typescript
+import express from 'express';
+import grace, { Config, Headers } from 'react-gracefully';
+
+const app = express();
+const config: Config = {
+  devices: {
+    mobile: (headers: Headers) => headers['x-device-type'] === 'mobile',
+    tablet: (headers: Headers) => headers['x-device-type'] === 'tablet',
+    desktop: (headers: Headers) => headers['x-device-type'] === 'desktop',
+    ios: (headers: Headers) => headers['x-device-type'] === 'ios',
+    android: (headers: Headers) => headers['x-device-type'] === 'android'
+  }
+};
+app.use(grace.express(config));
 ```
 
 ## Copyright
