@@ -1,10 +1,10 @@
 import { Breakpoints, Device, WindowOrientationState, WindowState } from '../../stores';
 
-export interface GracefulStateIsFunctions {
+export interface UseGraceStateIsFunctions {
   above: {
     /**
      * @example
-     * const { is } = useGraceful();
+     * const { is } = useGrace();
      * const isAboveSmall = is.above.breakpoint('sm');
      *
      * @description
@@ -21,7 +21,7 @@ export interface GracefulStateIsFunctions {
     window: {
       /**
        * @example
-       * const { is } = useGraceful();
+       * const { is } = useGrace();
        * const isAbove500px = is.above.window.width('500px');
        * const isAbove50em = is.above.window.width('50em');
        *
@@ -37,7 +37,7 @@ export interface GracefulStateIsFunctions {
       width: (units: string) => boolean;
       /**
        * @example
-       * const { is } = useGraceful();
+       * const { is } = useGrace();
        * const isAbove500px = is.above.window.height('500px');
        * const isAbove50em = is.above.window.height('50em');
        *
@@ -56,7 +56,7 @@ export interface GracefulStateIsFunctions {
   below: {
     /**
      * @example
-     * const { is } = useGraceful();
+     * const { is } = useGrace();
      * const isBelowLarge = is.above.breakpoint('lg');
      *
      * @description
@@ -73,7 +73,7 @@ export interface GracefulStateIsFunctions {
     window: {
       /**
        * @example
-       * const { is } = useGraceful();
+       * const { is } = useGrace();
        * const isBelow500px = is.below.window.width('500px');
        * const isBelow50em = is.below.window.width('50em');
        *
@@ -89,7 +89,7 @@ export interface GracefulStateIsFunctions {
       width: (units: string) => boolean;
       /**
        * @example
-       * const { is } = useGraceful();
+       * const { is } = useGrace();
        * const isBelow500px = is.below.window.height('500px');
        * const isBelow50em = is.below.window.height('50em');
        *
@@ -108,7 +108,7 @@ export interface GracefulStateIsFunctions {
   current: {
     /**
      * @example
-     * const { is } = useGraceful();
+     * const { is } = useGrace();
      * const isMedium = is.current.breakpoint('md');
      *
      * @description
@@ -125,7 +125,7 @@ export interface GracefulStateIsFunctions {
     window: {
       /**
        * @example
-       * const { is } = useGraceful();
+       * const { is } = useGrace();
        * const isCurrentWidth500px = is.current.window.width('500px');
        * const isCurrentWidth50em = is.current.window.width('50em');
        *
@@ -141,7 +141,7 @@ export interface GracefulStateIsFunctions {
       width: (units: string) => boolean;
       /**
        * @example
-       * const { is } = useGraceful();
+       * const { is } = useGrace();
        * const isCurrentHeight500px = is.current.window.height('500px');
        * const isCurrentHeight50em = is.current.window.height('50em');
        *
@@ -157,7 +157,7 @@ export interface GracefulStateIsFunctions {
       height: (units: string) => boolean;
       /**
        * @example
-       * const { is } = useGraceful();
+       * const { is } = useGrace();
        * const isPortrait = is.current.window.orientation('portrait');
        * const isLandscape = is.current.window.orientation('landscape');
        *
@@ -173,7 +173,7 @@ export interface GracefulStateIsFunctions {
       orientation: (orientation: WindowOrientationState) => boolean;
       /**
        * @example
-       * const { is } = useGraceful();
+       * const { is } = useGrace();
        * const isPortrait = is.current.window.portrait();
        *
        * @description
@@ -186,7 +186,7 @@ export interface GracefulStateIsFunctions {
       portrait: () => boolean;
       /**
        * @example
-       * const { is } = useGraceful();
+       * const { is } = useGrace();
        * const isLandscape = is.current.window.landscape();
        *
        * @description
@@ -201,7 +201,7 @@ export interface GracefulStateIsFunctions {
   };
   /**
    * @example
-   * const { is } = useGraceful();
+   * const { is } = useGrace();
    * const isAndroid = is.device('android');
    * const isIOS = is.device('iOS');
    * const isSmartTV = is.device('smart-tv');
@@ -218,7 +218,7 @@ export interface GracefulStateIsFunctions {
   device: (device: string) => boolean;
   /**
    * @example
-   * const { is } = useGraceful();
+   * const { is } = useGrace();
    * const isMobile = is.mobile();
    *
    * @description
@@ -231,7 +231,7 @@ export interface GracefulStateIsFunctions {
   mobile: () => boolean;
   /**
    * @example
-   * const { is } = useGraceful();
+   * const { is } = useGrace();
    * const isTablet = is.tablet();
    *
    * @description
@@ -244,7 +244,7 @@ export interface GracefulStateIsFunctions {
   tablet: () => boolean;
   /**
    * @example
-   * const { is } = useGraceful();
+   * const { is } = useGrace();
    * const isDesktop = is.desktop();
    *
    * @description
@@ -257,10 +257,10 @@ export interface GracefulStateIsFunctions {
   desktop: () => boolean;
 }
 
-export interface GracefulState {
+export interface UseGraceState {
   /**
    * @example
-   * const { is, breakpoints, devices, window } = useGracefully();
+   * const { is, breakpoints, devices, window } = useGrace();
    * console.log(breakpoints); // { sm: { min: undefined, max: '500px' }, md: { min: '501px', max: '1000px' }, lg: { min: '1001px', max: undefined } }
    *
    * @description
@@ -271,7 +271,7 @@ export interface GracefulState {
   breakpoints: Breakpoints;
   /**
    * @example
-   * const { is, breakpoints, devices, window } = useGracefully();
+   * const { is, breakpoints, devices, window } = useGrace();
    * console.log(devices); // ['mobile', 'android']
    *
    * @description
@@ -282,7 +282,7 @@ export interface GracefulState {
   devices: Device[];
   /**
    * @example
-   * const { is, breakpoints, devices, window } = useGracefully();
+   * const { is, breakpoints, devices, window } = useGrace();
    * console.log(window); // { width: '1000px', height: '1000px', orientation: 'portrait' }
    *
    * @description
@@ -293,7 +293,7 @@ export interface GracefulState {
   window: WindowState;
   /**
    * @example
-   * const { is } = useGracefully();
+   * const { is } = useGrace();
    * const isMobile = is.mobile();
    * const isAboveMedium = is.above.breakpoint('md');
    * const isWindowHeightBelow500px = is.below.window.height('500px');
@@ -304,5 +304,5 @@ export interface GracefulState {
    *
    * @returns {Object} is - collection of functions to get details about device, breakpoint and/or window sizes or orientation
    */
-  is: GracefulStateIsFunctions;
+  is: UseGraceStateIsFunctions;
 }
