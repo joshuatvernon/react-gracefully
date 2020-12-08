@@ -12,7 +12,7 @@ npm install --save react-gracefully
 
 ## Usage
 
-### Hook
+### `useGrace` hook
 
 **react-gracefully** exposes the `useGrace` hook to get access to _devices_, _breakpoints_ and _window_ details.
 
@@ -80,7 +80,7 @@ export const Page = () => {
 
 **react-gracefully** exposes a number of components. These components can be used to setup the configuration or show or hide content server side.
 
-#### Show
+#### `Show` component
 
 The `Show` component can be used to show content for specific _breakpoints_ or _devices_. Since it uses media queries under the hood all content is returned from the server to the client and then hidden or shown using css. This means it can be used effectively in server side rendered apps such as [Next.js](https://github.com/vercel/next.js/).
 
@@ -102,7 +102,7 @@ export const Page = () => {
 };
 ```
 
-#### Hide
+#### `Hide` component
 
 The `Hide` component can be used to hide content for specific _breakpoints_ or _devices_. Since it uses media queries under the hood all content is returned from the server to the client and then hidden or shown using css. This means it can be used effectively in server side rendered apps such as [Next.js](https://github.com/vercel/next.js/).
 
@@ -124,7 +124,7 @@ export const Page = () => {
 };
 ```
 
-#### GraceProvider
+#### `GraceProvider` component
 
 The `GraceProvider` component is used to scope and configure **use-gracefully** for the app. It allows custom _breakpoints_ and/or _devices_ to be configured.
 
