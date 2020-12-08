@@ -2,11 +2,11 @@ import keys from 'lodash.keys';
 import pickBy from 'lodash.pickby';
 
 import { configSelectors, globalSelectors, useConfigStore, useGlobalStore, WindowOrientationState } from '../../stores';
-import { GracefulState } from './types';
+import { UseGraceState } from './types';
 
 /**
  * @example
- * const { is, breakpoints, devices, window } = useGracefully();
+ * const { is, breakpoints, devices, window } = useGrace();
  * const isMobile = is.mobile();
  * const isAboveMedium = is.above.breakpoint('md');
  * const isWindowHeightBelow500px = is.below.window.height('500px');
@@ -19,9 +19,9 @@ import { GracefulState } from './types';
  * @description
  * React hook used to get details about device, breapoints and/or window sizes or orientation
  *
- * @returns {Object} gracefulState - state used to device, breakpoint and window details
+ * @returns {Object} useGraceState - state used to store device, breakpoint and window details
  */
-export const useGracefully = (): GracefulState => {
+export const useGrace = (): UseGraceState => {
   const [globalState] = useGlobalStore();
 
   const {
