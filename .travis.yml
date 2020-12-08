@@ -3,8 +3,8 @@ dist: xenial
 language: node_js
 env:
   global:
-    - LAST_PUBLISHED_VERSION=$(npm run --silent latest-published-version)
-    - BUILD_VERSION=$(npm run --silent current-version)
+    - LAST_PUBLISHED_VERSION=$(npm run --silent version:latest-published)
+    - BUILD_VERSION=$(npm run --silent version:current)
 install:
   - npm install
   - npm run build

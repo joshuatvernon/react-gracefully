@@ -26,14 +26,11 @@
     "build": "tsc",
     "build:watch": "tsc --watch",
     "clean": "rm -rf ./lib",
-    "cli": "cbf -j cli,cli:docs,current-version,postinstall,latest-published-version,tag:build-annotated,tag:changes-since-latest,tag:latest,tag:latest-annotated,tag:update-latest,prepare,prepublishOnly,preversion,postversion",
-    "cli:docs": "cbf -d -j cli",
-    "current-version": "echo $npm_package_version",
+    "cli": "cbf -j prebuild,cli,cli:docs,postinstall,tag:build-annotated,tag:changes-since-latest,tag:latest,tag:latest-annotated,tag:update-latest,preversion,version,postversion",
+    "cli:docs": "cbf -d -j prebuild,cli,cli:docs,postinstall,tag:build-annotated,tag:changes-since-latest,tag:latest,tag:latest-annotated,tag:update-latest,preversion,version,postversion",
     "postinstall": "npm run sort",
-    "latest-published-version": "npm view react-gracefully version",
     "lint": "eslint --ignore-path .gitignore --ext .ts,.tsx,.js,.jsx .",
     "lint:fix": "eslint --fix --ignore-path .gitignore --ext .ts,.tsx,.js,.jsx .",
-    "prepublishOnly": "npm run test && npm run lint",
     "sort": "sort-package-json",
     "tag:build-annotated": "echo \"$(npm run --silent tag:latest-annotated)\n\n$(npm run --silent tag:changes-since-latest)\"",
     "tag:changes-since-latest": "echo \"$(git --no-pager log $(git describe --abbrev=0 --tags $(git rev-list --tags --skip=1 --max-count=1))..$(git describe --tags --abbrev=0) --no-merges --oneline --pretty=format:'- %s')\"",
@@ -45,7 +42,9 @@
     "test:watch": "jest --watch",
     "preversion": "npm run lint",
     "version": "genversion --semi version.js && git add version.js",
-    "postversion": "npm run --silent tag:update-latest && git push -u origin $(git rev-parse --abbrev-ref HEAD) && git push --follow-tags"
+    "postversion": "npm run --silent tag:update-latest && git push -u origin $(git rev-parse --abbrev-ref HEAD) && git push --follow-tags",
+    "version:current": "echo $npm_package_version",
+    "version:latest-published": "npm view react-gracefully version"
   },
   "dependencies": {
     "@emotion/react": "^11.1.2",
