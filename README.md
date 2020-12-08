@@ -7,12 +7,12 @@
 ## Installation
 
 ```sh
-npm install react-gracefully
+npm install --save react-gracefully
 ```
 
 ## Usage
 
-### Middleware
+### Express Middleware
 
 #### Default (UserAgent)
 
@@ -37,147 +37,156 @@ import grace, { Config, Headers } from 'react-gracefully';
 const app = express();
 
 const config: Config = {
-    mobile: (headers: Headers) => headers['x-device-type'] === 'mobile',
-    tablet: (headers: Headers) => headers['x-device-type'] === 'tablet',
-    desktop: (headers: Headers) => headers['x-device-type'] === 'desktop',
-    ios: (headers: Headers) => headers['x-device-type'] === 'ios',
-    android: (headers: Headers) => headers['x-device-type'] === 'android'
+  mobile: (headers: Headers) => headers['x-device-type'] === 'mobile',
+  tablet: (headers: Headers) => headers['x-device-type'] === 'tablet',
+  desktop: (headers: Headers) => headers['x-device-type'] === 'desktop',
+  ios: (headers: Headers) => headers['x-device-type'] === 'ios',
+  android: (headers: Headers) => headers['x-device-type'] === 'android'
 };
 app.use(grace.express());
 ```
 
 ### Hook
 
+**react-gracefully** exposes the `useGrace` hook to get access to _devices_, _breakpoints_ and _window_ details.
+
 #### Devices
+
+Here is an example of how to use the `useGrace` hook to access _device_ details.
 
 ```jsx
 import React from 'react';
 import { useGrace } from 'react-gracefully';
 
 export const Page = () => {
-    const { is } = useGrace();
-    const isMobile = is.mobile();
-    const isTablet = is.tablet();
-    const isDesktop = is.tablet();
-    const isAndroid = is.device('android');
-    return (
-        <div>
-            {isAndroid && <h2>Android Title</h2>}
-            {isMobile && <h2>Mobile Title</h2>}
-            {(isTablet || isDesktop) && <h1>Tablet or Desktop Title</h1>}
-        </div>
-    )
+  const { is } = useGrace();
+  const isMobile = is.mobile();
+  const isTablet = is.tablet();
+  const isDesktop = is.tablet();
+  const isAndroid = is.device('android');
+  return (
+    <div>
+      {isAndroid && <h2>Android Title</h2>}
+      {isMobile && <h2>Mobile Title</h2>}
+      {(isTablet || isDesktop) && <h1>Tablet or Desktop Title</h1>}
+    </div>
+  );
 };
 ```
 
 #### Breakpoints
 
+Here is an example of how to use the `useGrace` hook to access _breakpoint_ details.
+
 ```jsx
 import React from 'react';
 import { useGrace } from 'react-gracefully';
 
 export const Page = () => {
-    const { is } = useGrace();
-    const isAboveSmall = is.above.breakpoint('sm');
-    const isBelowLarge = is.below.breakpoint('lg');
-    const isMedium = is.current.breakpoint('md');
-    return (
-        <div>
-            {isAboveSmall && isBelowLarge && isMedium && <h2>Medium Title</h2>}
-        </div>
-    )
+  const { is } = useGrace();
+  const isAboveSmall = is.above.breakpoint('sm');
+  const isBelowLarge = is.below.breakpoint('lg');
+  const isMedium = is.current.breakpoint('md');
+  return <div>{isAboveSmall && isBelowLarge && isMedium && <h2>Medium Title</h2>}</div>;
 };
 ```
 
 #### Window
 
+Here is an example of how to use the `useGrace` hook to access _window_ details.
+
 ```jsx
 import React from 'react';
 import { useGrace } from 'react-gracefully';
 
 export const Page = () => {
-    const { is } = useGrace();
-    const isWindowHeightAbove2em = is.above.window.height('2em');
-    const isWindowWidthBelow500px = is.below.window.width('500px');
-    const isLandscape = is.current.window.landscape();
-    return (
-        <div>
-            {isWindowHeightAbove2em && isWindowWidthBelow500px && isLandscape && <h2>Landscape Medium Title</h2>}
-        </div>
-    )
+  const { is } = useGrace();
+  const isWindowHeightAbove2em = is.above.window.height('2em');
+  const isWindowWidthBelow500px = is.below.window.width('500px');
+  const isLandscape = is.current.window.landscape();
+  return (
+    <div>{isWindowHeightAbove2em && isWindowWidthBelow500px && isLandscape && <h2>Landscape Medium Title</h2>}</div>
+  );
 };
 ```
 
 ### Components
 
-#### Provider
+**react-gracefully** exposes a number of components. These components can be used to setup the configuration or show or hide content server side.
+
+#### GraceProvider
+
+The `GraceProvider` component is used to setup the **use-gracefully** configuration. It allows custom _breakpoints_ or custom _devices_ to setup.
 
 ```jsx
 import React from 'react';
 import { GraceProvider } from 'react-gracefully';
 
 export const App = () => {
-    const breakpoints: Breakpoints = {
-        sm: {
-            max: '500px'
-        },
-        md: {
-            min: '500px',
-            max: '1000px'
-        },
-        lg: {
-            min: '1000px'
-        }
-    };
-    const devices = ['mobile', 'ios', 'android', 'tablet', 'desktop'];
-    return (
-        <GraceProvider breakpoints={breakpoints} devices={devices}>
-            <Router />
-        </GraceProvider>
-    )
+  const breakpoints: Breakpoints = {
+    sm: {
+      max: '500px'
+    },
+    md: {
+      min: '500px',
+      max: '1000px'
+    },
+    lg: {
+      min: '1000px'
+    }
+  };
+  const devices = ['mobile', 'ios', 'android', 'tablet', 'desktop'];
+  return (
+    <GraceProvider breakpoints={breakpoints} devices={devices}>
+      <Router />
+    </GraceProvider>
+  );
 };
 ```
 
 #### Show
+
+The `Show` component can be used to show content for specific _breakpoints_ or _devices_. Since it uses media queries under the hood all content is returned from the server to the client and then hidden or shown using css. This means it can be used in server side render apps such as NextJS.
 
 ```jsx
 import React from 'react';
 import { Show } from 'react-gracefully';
 
 export const Page = () => {
-    return (
-        <div>
-            <Show show={['mobile']}>
-                <h2>Mobile Title</h2>
-            </Show>
-            <Show show={['tablet', 'desktop']}>
-                <h1>Tablet or Desktop Title</h1>
-            </Show>
-        </div>
-    )
+  return (
+    <div>
+      <Show show={['mobile']}>
+        <h2>Mobile Title</h2>
+      </Show>
+      <Show show={['tablet', 'desktop']}>
+        <h1>Tablet or Desktop Title</h1>
+      </Show>
+    </div>
+  );
 };
 ```
 
 #### Hide
+
+The `Hide` component can be used to hide content for specific _breakpoints_ or _devices_. Since it uses media queries under the hood all content is returned from the server to the client and then hidden or shown using css. This means it can be used in server side render apps such as NextJS.
 
 ```jsx
 import React from 'react';
 import { Hide } from 'react-gracefully';
 
 export const Page = () => {
-    return (
-        <div>
-            <Hide hide={['mobile']}>
-                <h1>Tablet or Desktop Title</h1>
-            </Hide>
-            <Hide hide={['tablet', 'desktop']}>
-                <h2>Mobile Title</h2>
-            </Hide>
-        </div>
-    )
+  return (
+    <div>
+      <Hide hide={['mobile']}>
+        <h1>Tablet or Desktop Title</h1>
+      </Hide>
+      <Hide hide={['tablet', 'desktop']}>
+        <h2>Mobile Title</h2>
+      </Hide>
+    </div>
+  );
 };
 ```
-
 
 ## Copyright
 
