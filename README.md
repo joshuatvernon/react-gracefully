@@ -51,6 +51,7 @@ app.use(grace.express());
 #### Devices
 
 ```jsx
+import React from 'react';
 import { useGrace } from 'react-gracefully';
 
 export const Page = () => {
@@ -60,11 +61,11 @@ export const Page = () => {
     const isDesktop = is.tablet();
     const isAndroid = is.device('android');
     return (
-        <>
+        <div>
             {isAndroid && <h2>Android Title</h2>}
             {isMobile && <h2>Mobile Title</h2>}
             {(isTablet || isDesktop) && <h1>Tablet or Desktop Title</h1>}
-        </>
+        </div>
     )
 };
 ```
@@ -72,6 +73,7 @@ export const Page = () => {
 #### Breakpoints
 
 ```jsx
+import React from 'react';
 import { useGrace } from 'react-gracefully';
 
 export const Page = () => {
@@ -80,9 +82,9 @@ export const Page = () => {
     const isBelowLarge = is.below.breakpoint('lg');
     const isMedium = is.current.breakpoint('md');
     return (
-        <>
+        <div>
             {isAboveSmall && isBelowLarge && isMedium && <h2>Medium Title</h2>}
-        </>
+        </div>
     )
 };
 ```
@@ -90,6 +92,7 @@ export const Page = () => {
 #### Window
 
 ```jsx
+import React from 'react';
 import { useGrace } from 'react-gracefully';
 
 export const Page = () => {
@@ -98,9 +101,9 @@ export const Page = () => {
     const isWindowWidthBelow500px = is.below.window.width('500px');
     const isLandscape = is.current.window.landscape();
     return (
-        <>
+        <div>
             {isWindowHeightAbove2em && isWindowWidthBelow500px && isLandscape && <h2>Landscape Medium Title</h2>}
-        </>
+        </div>
     )
 };
 ```
@@ -110,6 +113,7 @@ export const Page = () => {
 #### Provider
 
 ```jsx
+import React from 'react';
 import { GraceProvider } from 'react-gracefully';
 
 export const App = () => {
@@ -137,18 +141,19 @@ export const App = () => {
 #### Show
 
 ```jsx
+import React from 'react';
 import { Show } from 'react-gracefully';
 
 export const Page = () => {
     return (
-        <>
+        <div>
             <Show show={['mobile']}>
                 <h2>Mobile Title</h2>
             </Show>
             <Show show={['tablet', 'desktop']}>
                 <h1>Tablet or Desktop Title</h1>
             </Show>
-        </>
+        </div>
     )
 };
 ```
@@ -156,18 +161,19 @@ export const Page = () => {
 #### Hide
 
 ```jsx
+import React from 'react';
 import { Hide } from 'react-gracefully';
 
 export const Page = () => {
     return (
-        <>
+        <div>
             <Hide hide={['mobile']}>
                 <h1>Tablet or Desktop Title</h1>
             </Hide>
             <Hide hide={['tablet', 'desktop']}>
                 <h2>Mobile Title</h2>
             </Hide>
-        </>
+        </div>
     )
 };
 ```
