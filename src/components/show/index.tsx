@@ -26,3 +26,5 @@ export const Show: FunctionComponent<ShowProps> = (props) => {
     </StyledMedia>
   );
 };
+
+export * from './types';

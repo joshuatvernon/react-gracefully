@@ -51,3 +51,5 @@ export const GracefulProvider: FunctionComponent<GracefulProviderProps> = (props
     </ConfigStoreContainer>
   );
 };
+
+export * from './types';
