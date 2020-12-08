@@ -26,7 +26,7 @@ const app = express();
 app.use(grace.express());
 ```
 
-#### Headers
+#### Custom (Headers)
 
 Optionally, **react-gracefully** express middleware can be configured to check custom headers for the current device type.
 
@@ -35,15 +35,16 @@ import express from 'express';
 import grace, { Config, Headers } from 'react-gracefully';
 
 const app = express();
-
 const config: Config = {
-  mobile: (headers: Headers) => headers['x-device-type'] === 'mobile',
-  tablet: (headers: Headers) => headers['x-device-type'] === 'tablet',
-  desktop: (headers: Headers) => headers['x-device-type'] === 'desktop',
-  ios: (headers: Headers) => headers['x-device-type'] === 'ios',
-  android: (headers: Headers) => headers['x-device-type'] === 'android'
+  devices: {
+    mobile: (headers: Headers) => headers['x-device-type'] === 'mobile',
+    tablet: (headers: Headers) => headers['x-device-type'] === 'tablet',
+    desktop: (headers: Headers) => headers['x-device-type'] === 'desktop',
+    ios: (headers: Headers) => headers['x-device-type'] === 'ios',
+    android: (headers: Headers) => headers['x-device-type'] === 'android'
+  }
 };
-app.use(grace.express());
+app.use(grace.express(config));
 ```
 
 ### Hook
