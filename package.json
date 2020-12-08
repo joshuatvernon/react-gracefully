@@ -29,7 +29,7 @@
     "cli:docs": "cbf -d -j cli",
     "current-version": "echo $npm_package_version",
     "postinstall": "npm run sort",
-    "latest-published-version": "npm view cbf version",
+    "latest-published-version": "npm view react-gracefully version",
     "lint": "eslint --ignore-path .gitignore --ext .ts,.tsx,.js,.jsx .",
     "lint:fix": "eslint --fix --ignore-path .gitignore --ext .ts,.tsx,.js,.jsx .",
     "prepare": "npm run build",
