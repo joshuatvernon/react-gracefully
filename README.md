@@ -18,7 +18,7 @@ npm install react-gracefully
 
 The **react-gracefully** express middleware by default will use the `user-agent` to sniff the current device type.
 
-```javascript
+```typescript
 import express from 'express';
 import grace from 'react-gracefully';
 
@@ -30,7 +30,7 @@ app.use(grace.express());
 
 Optionally, **react-gracefully** express middleware can be configured to check custom headers for the current device type.
 
-```javascript
+```typescript
 import express from 'express';
 import grace, { Config, Headers } from 'react-gracefully';
 
@@ -50,7 +50,7 @@ app.use(grace.express());
 
 #### Devices
 
-```react
+```jsx
 import { useGrace } from 'react-gracefully';
 
 export const Page = () => {
@@ -71,7 +71,7 @@ export const Page = () => {
 
 #### Breakpoints
 
-```react
+```jsx
 import { useGrace } from 'react-gracefully';
 
 export const Page = () => {
@@ -89,7 +89,7 @@ export const Page = () => {
 
 #### Window
 
-```react
+```jsx
 import { useGrace } from 'react-gracefully';
 
 export const Page = () => {
@@ -109,7 +109,7 @@ export const Page = () => {
 
 #### Provider
 
-```react
+```jsx
 import { GraceProvider } from 'react-gracefully';
 
 export const App = () => {
@@ -136,7 +136,7 @@ export const App = () => {
 
 #### Show
 
-```react
+```jsx
 import { Show } from 'react-gracefully';
 
 export const Page = () => {
@@ -155,7 +155,7 @@ export const Page = () => {
 
 #### Hide
 
-```react
+```jsx
 import { Hide } from 'react-gracefully';
 
 export const Page = () => {
