@@ -23,14 +23,7 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module'
   },
-  plugins: [
-    'react',
-    '@typescript-eslint/eslint-plugin',
-    'prettier',
-    'jest',
-    'import',
-    'simple-import-sort'
-  ],
+  plugins: ['react', '@typescript-eslint/eslint-plugin', 'prettier', 'jest', 'import', 'simple-import-sort'],
   settings: {
     react: {
       version: 'detect'
@@ -47,18 +40,6 @@ module.exports = {
     curly: ['error', 'all'],
     // Require semicolons at the end of statements
     semi: ['error', 'always'],
-    // Disable 'sort keys' in favor of 'sort-keys-shorthand'
-    'sort-keys': 0,
-    'sort-keys-shorthand/sort-keys-shorthand': [
-      'error',
-      'asc',
-      {
-        caseSensitive: true,
-        natural: true,
-        minKeys: 2,
-        shorthand: 'first'
-      }
-    ],
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/no-use-before-define': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
