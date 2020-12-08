@@ -7,6 +7,7 @@ env:
     - BUILD_VERSION=$(npm run --silent current-version)
 install:
   - npm install
+  - npm run build
 script:
   - 'echo last_published_version: $LAST_PUBLISHED_VERSION'
   - 'echo build version: $BUILD_VERSION'
@@ -15,6 +16,7 @@ script:
 deploy:
   provider: npm
   email: joshuatvernon@gmail.com
+  skip_cleanup: true
   on:
     branch: main
     condition: '$BUILD_VERSION != $LAST_PUBLISHED_VERSION'
