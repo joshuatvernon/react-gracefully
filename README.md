@@ -4,6 +4,10 @@
 
 [![npm version](https://badge.fury.io/js/react-gracefully.svg)](https://badge.fury.io/js/react-gracefully) [![Build Status](https://travis-ci.com/joshuatvernon/react-gracefully.svg?branch=main)](https://travis-ci.com/joshuatvernon/react-gracefully) [![vulnerabilities](https://snyk.io/test/github/joshuatvernon/react-gracefully/badge.svg)](https://snyk.io/test/github/joshuatvernon/react-gracefully)
 
+## ⚠️ Warning ⚠️
+
+> **react-gracefully** is in pre-release and has not yet been tested fully. It is not recommended to be used yet.
+
 ## Installation
 
 ```sh
