@@ -1,11 +1,10 @@
 import { createContainer, createHook, createStore } from 'react-sweet-state';
 
+import { CONFIG_STORE_NAME } from '../../constants';
 import { ConfigActions, configActions } from './actions';
 import { configSelectors } from './selectors';
 import { initialConfigState } from './state';
 import { ConfigSelectorProps, ConfigState } from './types';
-
-export const CONFIG_STORE_NAME = 'react-gracefully-config-store';
 
 const configStore = createStore({
   initialState: initialConfigState,

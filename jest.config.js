@@ -1,11 +1,10 @@
-// https://jestjs.io/docs/en/configuration
 module.exports = {
   clearMocks: true,
   collectCoverage: true,
   collectCoverageFrom: ['src/**/*.{ts,tsx}', '!**/*.d.ts', '!./*.js'],
   coverageDirectory: 'coverage',
   coveragePathIgnorePatterns: ['node_modules', 'coverage', 'lib'],
-  coverageReporters: ['json', 'text'],
+  coverageReporters: ['json', 'text', 'lcov'],
   coverageThreshold: {
     global: {
       branches: 1,

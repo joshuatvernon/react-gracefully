@@ -1,6 +1,6 @@
 import toPx from 'to-px';
 
-import { GlobalState, WindowOrientationState, WindowState } from '../../types';
+import { GlobalState, Orientation, WindowState } from '../../types';
 
 export const getWindowState = (state: GlobalState): WindowState => state.window;
 
@@ -26,9 +26,9 @@ export const isWindowHeightLessThan = (state: GlobalState, height: string): bool
 export const isWindowHeightGreaterThan = (state: GlobalState, height: string): boolean =>
   toPx(state.window.height) > toPx(height);
 
-export const getWindowOrientation = (state: GlobalState): WindowOrientationState => state.window.orientation;
+export const getWindowOrientation = (state: GlobalState): Orientation => state.window.orientation;
 
-export const isWindowOrientationEqual = (state: GlobalState, orientation: WindowOrientationState): boolean =>
+export const isWindowOrientationEqual = (state: GlobalState, orientation: Orientation): boolean =>
   orientation === state.window.orientation;
 
 export const globalWindowSelectors = {

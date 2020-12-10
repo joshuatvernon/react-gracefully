@@ -1,4 +1,4 @@
-import { GlobalState, WindowOrientationState } from '../types';
+import { GlobalState, Orientation } from '../types';
 
 export const initialGlobalState: GlobalState = {
   devices: {
@@ -9,6 +9,6 @@ export const initialGlobalState: GlobalState = {
   window: {
     width: '',
     height: '',
-    orientation: WindowOrientationState.Portait
+    orientation: Orientation.Portait
   }
 };

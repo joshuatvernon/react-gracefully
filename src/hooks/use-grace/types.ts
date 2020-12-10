@@ -1,4 +1,4 @@
-import { Breakpoints, Device, WindowOrientationState, WindowState } from '../../stores';
+import { Breakpoints, Device, Orientation, WindowState } from '../../stores';
 
 export interface UseGraceStateIsFunctions {
   above: {
@@ -170,7 +170,7 @@ export interface UseGraceStateIsFunctions {
        *
        * @returns {boolean} isCurrentOrientation - whether or not the current orientation is equal to orientation.
        */
-      orientation: (orientation: WindowOrientationState) => boolean;
+      orientation: (orientation: Orientation) => boolean;
       /**
        * @example
        * const { is } = useGrace();

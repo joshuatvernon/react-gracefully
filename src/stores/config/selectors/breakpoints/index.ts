@@ -1,3 +1,4 @@
+import isEmpty from 'lodash.isempty';
 import isNil from 'lodash.isnil';
 import toPx from 'to-px';
 
@@ -14,6 +15,9 @@ export const isCurrentBreakpoint = (
   windowWidth: string
 ): undefined | boolean => {
   const breakpoint = getBreakpoint(state, breakpointKey);
+  if (isNil(windowWidth) || isEmpty(windowWidth)) {
+    return false;
+  }
   if (!isNil(breakpoint)) {
     // if `breakpoint.min` is undefined it is considered 0
     const isAboveOrEqualToMin = breakpoint.min ? toPx(windowWidth) >= toPx(breakpoint.min) : true;
@@ -30,6 +34,9 @@ export const isAboveBreakpoint = (
   windowWidth: string
 ): undefined | boolean => {
   const breakpoint = getBreakpoint(state, breakpointKey);
+  if (isNil(windowWidth) || isEmpty(windowWidth)) {
+    return false;
+  }
   if (!isNil(breakpoint)) {
     // if `breakpoint.max` is undefined it is considered infinity
     return breakpoint.max ? toPx(windowWidth) > toPx(breakpoint.max) : false;
@@ -43,6 +50,9 @@ export const isBelowBreakpoint = (
   windowWidth: string
 ): undefined | boolean => {
   const breakpoint = getBreakpoint(state, breakpointKey);
+  if (isNil(windowWidth) || isEmpty(windowWidth)) {
+    return false;
+  }
   if (!isNil(breakpoint)) {
     // if `breakpoint.min` is undefined it is considered 0
     return breakpoint.min ? toPx(windowWidth) < toPx(breakpoint.min) : false;
