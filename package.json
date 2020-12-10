@@ -46,7 +46,7 @@
     "test": "jest",
     "test:coverage": "jest --coverage",
     "test:coverage:report": "npm run test:coverage && http-server -p 4001 ./coverage/lcov-report -c-1",
-    "test:coverage:badges": "npm run test:coverage && jest-coverage-badges --output './badges' && git add badges/* && git commit -m 'Updated test coverage badges'",
+    "test:coverage:badges": "npm run test:coverage && jest-coverage-badges --output './badges' && git add badges/* && git commit -m 'Updated test coverage badges' || echo 'Test coverage badges not updated'",
     "test:watch": "jest --watch",
     "preversion": "npm run lint",
     "version": "genversion --semi version.js && git add version.js",
