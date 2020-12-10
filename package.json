@@ -1,6 +1,6 @@
 {
   "name": "react-gracefully",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "A utility for gracefully rendering responsive react code server side",
   "keywords": [
     "react",
