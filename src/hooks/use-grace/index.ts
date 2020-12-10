@@ -1,7 +1,7 @@
 import keys from 'lodash.keys';
 import pickBy from 'lodash.pickby';
 
-import { configSelectors, globalSelectors, useConfigStore, useGlobalStore, WindowOrientationState } from '../../stores';
+import { configSelectors, globalSelectors, Orientation, useConfigStore, useGlobalStore } from '../../stores';
 import { UseGraceState } from './types';
 
 /**
@@ -82,9 +82,9 @@ export const useGrace = (): UseGraceState => {
         window: {
           width: (units: string) => isWindowWidthEqual(globalState, units),
           height: (units: string) => isWindowHeightEqual(globalState, units),
-          orientation: (orientation: WindowOrientationState) => isWindowOrientationEqual(globalState, orientation),
-          portrait: () => isWindowOrientationEqual(globalState, WindowOrientationState.Portait),
-          landscape: () => isWindowOrientationEqual(globalState, WindowOrientationState.Landscape)
+          orientation: (orientation: Orientation) => isWindowOrientationEqual(globalState, orientation),
+          portrait: () => isWindowOrientationEqual(globalState, Orientation.Portait),
+          landscape: () => isWindowOrientationEqual(globalState, Orientation.Landscape)
         }
       },
       device: (device: string) => isDevice(globalState, device),

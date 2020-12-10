@@ -1,5 +1,5 @@
 import { initialGlobalState } from '../../state';
-import { WindowOrientationState, WindowState } from '../../types';
+import { Orientation, WindowState } from '../../types';
 import { updateWindow } from './index';
 
 const setState = jest.fn();
@@ -28,7 +28,7 @@ describe('updateWindow', () => {
     const window: WindowState = {
       width: '1000px',
       height: '1000px',
-      orientation: WindowOrientationState.Landscape
+      orientation: Orientation.Landscape
     };
     const thunk = updateWindow(window);
     getState.mockImplementation(() => initialGlobalState);

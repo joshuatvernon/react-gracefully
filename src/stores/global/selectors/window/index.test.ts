@@ -1,7 +1,7 @@
 import cloneDeep from 'lodash.clonedeep';
 
 import { initialGlobalState } from '../../state';
-import { WindowOrientationState } from '../../types';
+import { Orientation } from '../../types';
 import { globalWindowSelectors } from './index';
 
 let state = cloneDeep(initialGlobalState);
@@ -16,7 +16,7 @@ describe('globalWindowSelectors', () => {
     const window = {
       width: '1000px',
       height: '1000px',
-      orientation: WindowOrientationState.Portait
+      orientation: Orientation.Portait
     };
     state.window = window;
 
@@ -77,7 +77,7 @@ describe('globalWindowSelectors', () => {
 
   test('getWindowOrientation returns portrait when orientation is portrait', () => {
     // given
-    const orientation = WindowOrientationState.Portait;
+    const orientation = Orientation.Portait;
     state.window.orientation = orientation;
 
     // when
@@ -89,7 +89,7 @@ describe('globalWindowSelectors', () => {
 
   test('getWindowOrientation returns landscape when orientation is landscape', () => {
     // given
-    const orientation = WindowOrientationState.Landscape;
+    const orientation = Orientation.Landscape;
     state.window.orientation = orientation;
 
     // when
@@ -509,8 +509,8 @@ describe('globalWindowSelectors', () => {
 
   test('isWindowOrientationEqual returns true when orientations are equal', () => {
     // given
-    const orientation = WindowOrientationState.Landscape;
-    state.window.orientation = WindowOrientationState.Landscape;
+    const orientation = Orientation.Landscape;
+    state.window.orientation = Orientation.Landscape;
 
     // when
     const actual = globalWindowSelectors.isWindowOrientationEqual(state, orientation);
@@ -521,8 +521,8 @@ describe('globalWindowSelectors', () => {
 
   test('isWindowOrientationEqual returns false when orientations are NOT equal', () => {
     // given
-    const orientation = WindowOrientationState.Portait;
-    state.window.orientation = WindowOrientationState.Landscape;
+    const orientation = Orientation.Portait;
+    state.window.orientation = Orientation.Landscape;
 
     // when
     const actual = globalWindowSelectors.isWindowOrientationEqual(state, orientation);

@@ -1,11 +1,10 @@
 import { createContainer, createHook, createStore } from 'react-sweet-state';
 
+import { GLOBAL_STORE_NAME } from '../../constants';
 import { GlobalActions, globalActions } from './actions';
 import { globalSelectors } from './selectors';
 import { initialGlobalState } from './state';
 import { GlobalSelectorProps, GlobalState } from './types';
-
-export const GLOBAL_STORE_NAME = 'react-gracefully-global-store';
 
 const globalStore = createStore({
   initialState: initialGlobalState,

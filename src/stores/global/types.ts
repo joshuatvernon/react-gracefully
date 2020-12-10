@@ -7,7 +7,7 @@ export interface DevicesState {
   [key: string]: boolean;
 }
 
-export enum WindowOrientationState {
+export enum Orientation {
   Portait = 'portrait',
   Landscape = 'landscape'
 }
@@ -15,7 +15,7 @@ export enum WindowOrientationState {
 export interface WindowState {
   width: string;
   height: string;
-  orientation: WindowOrientationState;
+  orientation: Orientation;
 }
 
 export interface GlobalState {
