@@ -4,7 +4,7 @@ module.exports = {
   collectCoverageFrom: ['src/**/*.{ts,tsx}', '!**/*.d.ts', '!./*.js'],
   coverageDirectory: 'coverage',
   coveragePathIgnorePatterns: ['node_modules', 'coverage', 'lib'],
-  coverageReporters: ['json', 'text', 'lcov'],
+  coverageReporters: ['json', 'json-summary', 'text', 'lcov'],
   coverageThreshold: {
     global: {
       branches: 1,
