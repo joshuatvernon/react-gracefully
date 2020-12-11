@@ -1,7 +1,5 @@
-import isArray from 'lodash.isarray';
-import isNil from 'lodash.isnil';
-
 import { Breakpoints, Device, DevicesState, WindowState } from '../../stores';
+import { isNil } from '../../utils';
 
 export interface GraceProviderProps {
   devices?: undefined | Device[] | DevicesState;
@@ -15,4 +13,4 @@ export interface GraceProviderProps {
 }
 
 export const isDevicesState = (devices: undefined | Device[] | DevicesState): devices is DevicesState =>
-  !isNil(devices) && !isArray(devices);
+  !isNil(devices) && !Array.isArray(devices);

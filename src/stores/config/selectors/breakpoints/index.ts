@@ -1,7 +1,6 @@
-import isEmpty from 'lodash.isempty';
-import isNil from 'lodash.isnil';
 import toPx from 'to-px';
 
+import { isEmpty, isNil } from '../../../../utils';
 import { Breakpoint, Breakpoints, ConfigState } from '../../types';
 
 export const getBreakpoint = (state: ConfigState, breakpoint: string): undefined | Breakpoint =>

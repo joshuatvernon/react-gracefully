@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from 'react';
-import isEmpty from 'lodash.isempty';
 
 import { configSelectors, globalSelectors, useConfigStore, useGlobalStore } from '../../stores';
+import { isEmpty } from '../../utils';
 import { StyledMedia } from './styles';
 import { HideProps } from './types';
 

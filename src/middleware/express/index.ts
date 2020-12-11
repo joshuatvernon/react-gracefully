@@ -1,14 +1,11 @@
 import { defaultRegistry } from 'react-sweet-state';
 import { NextFunction, Request, Response } from 'express';
 import { Details } from 'express-useragent';
-import isEmpty from 'lodash.isempty';
 import isEqual from 'lodash.isequal';
-import isNil from 'lodash.isnil';
-import keys from 'lodash.keys';
-import uniq from 'lodash.uniq';
 
 import { UNKNOWN_DEVICE_TYPE } from '../../constants';
 import { configSelectors, configStore, DevicesState, globalSelectors, globalStore } from '../../stores';
+import { isEmpty, isNil, keys, uniq } from '../../utils';
 import { Config, isDeviceFunction } from './types';
 
 export const express = (config?: Config) => (req: Request, _res: Response, next: NextFunction): void => {

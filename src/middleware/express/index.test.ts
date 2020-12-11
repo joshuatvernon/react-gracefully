@@ -1,8 +1,6 @@
 import { defaultRegistry } from 'react-sweet-state';
 import { NextFunction, Request, Response } from 'express';
 import expressUseragent from 'express-useragent';
-import isEmpty from 'lodash.isempty';
-import isNil from 'lodash.isnil';
 
 import {
   ConfigState,
@@ -12,6 +10,7 @@ import {
   initialConfigState,
   initialGlobalState
 } from '../../stores';
+import { isEmpty, isNil } from '../../utils';
 import { Config, express } from './index';
 import { DevicesConfig, Headers } from './types';
 

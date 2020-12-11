@@ -1,11 +1,9 @@
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
-import isEmpty from 'lodash.isempty';
 import isEqual from 'lodash.isequal';
-import isNil from 'lodash.isnil';
-import keys from 'lodash.keys';
 
 import { Orientation } from '../../stores';
+import { isEmpty, isNil, keys } from '../../utils';
 import { ShowStyleProps } from './types';
 
 export const StyledMedia = styled.div`
