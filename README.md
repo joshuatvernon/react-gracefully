@@ -3,7 +3,7 @@
 <p align="center">
   <img src="https://user-images.githubusercontent.com/16813547/101833625-1bebd580-3aee-11eb-95b6-be06c2254207.png" alt="react-gracefully logo" height="150" />
 </p>
-<h1 align="center">react-gracefully</h1>
+<h1 align="center" style="margin-top: 0;">react-gracefully</h1>
 <p align="center">
   <a href="https://www.npmjs.com/package/react-gracefully"><img src="https://img.shields.io/npm/v/react-gracefully.svg"></a>
   <a href="https://travis-ci.com/joshuatvernon/react-gracefully"><img src="https://travis-ci.com/joshuatvernon/react-gracefully.svg?branch=main"></a>
