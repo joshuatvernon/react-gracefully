@@ -1,7 +1,5 @@
-import keys from 'lodash.keys';
-import pickBy from 'lodash.pickby';
-
 import { configSelectors, globalSelectors, Orientation, useConfigStore, useGlobalStore } from '../../stores';
+import { keys, pickBy } from '../../utils';
 import { UseGraceState } from './types';
 
 /**

@@ -9,7 +9,8 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
-    'plugin:prettier/recommended'
+    'plugin:prettier/recommended',
+    'plugin:you-dont-need-lodash-underscore/compatible'
   ],
   globals: {
     Atomics: 'readonly',

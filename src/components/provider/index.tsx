@@ -1,9 +1,6 @@
 import React, { FunctionComponent } from 'react';
 import isEqual from 'lodash.isequal';
-import isNil from 'lodash.isnil';
-import keys from 'lodash.keys';
 import merge from 'lodash.merge';
-import uniq from 'lodash.uniq';
 
 import { UNKNOWN_DEVICE_TYPE } from '../../constants';
 import {
@@ -15,6 +12,7 @@ import {
   initialGlobalState
 } from '../../stores';
 import { configSelectors, ConfigState, ConfigStoreContainer, Device } from '../../stores/config';
+import { isNil, keys, uniq } from '../../utils';
 import { GraceProviderProps, isDevicesState } from './types';
 
 export const GraceProvider: FunctionComponent<GraceProviderProps> = (props) => {

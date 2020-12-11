@@ -1,8 +1,7 @@
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
-import isEmpty from 'lodash.isempty';
-import isNil from 'lodash.isnil';
 
+import { isEmpty, isNil } from '../../utils';
 import { HideStyleProps } from './types';
 
 export const StyledMedia = styled.div`

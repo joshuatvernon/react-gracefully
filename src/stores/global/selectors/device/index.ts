@@ -1,5 +1,4 @@
-import keys from 'lodash.keys';
-
+import { keys } from '../../../../utils';
 import { DevicesState, GlobalState } from '../../types';
 
 export const isMobile = (state: GlobalState): boolean => state.devices.mobile;
