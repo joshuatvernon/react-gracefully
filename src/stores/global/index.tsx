@@ -19,8 +19,5 @@ const GlobalStoreContainer = createContainer<GlobalState, GlobalActions, GlobalS
   onUpdate: () => ({ setState }, { initialState }) => setState(initialState)
 });
 
-export * from './actions';
-export * from './selectors';
-export * from './state';
 export * from './types';
-export { globalStore, globalSelectors, useGlobalStore, GlobalStoreContainer };
+export { initialGlobalState, globalStore, globalSelectors, useGlobalStore, GlobalStoreContainer };

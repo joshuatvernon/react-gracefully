@@ -6,7 +6,12 @@ import { StyledMedia } from './styles';
 import { HideProps } from './types';
 
 export const Hide: FunctionComponent<HideProps> = (props) => {
-  const { breakpoints = [], devices = [], children } = props;
+  const {
+    breakpoints: hiddenBreakpoints = [],
+    devices: hiddenDevices = [],
+    orientation: hiddenOrientation,
+    children
+  } = props;
 
   const [configState] = useConfigStore();
   const [globalState] = useGlobalStore();
@@ -15,13 +20,18 @@ export const Hide: FunctionComponent<HideProps> = (props) => {
   const { getDevicesState } = globalSelectors;
 
   const devicesState = getDevicesState(globalState);
-
-  if (!isEmpty(devices) && isEmpty(devices.filter((device) => devicesState[device]))) {
+  if (!isEmpty(hiddenDevices) && !isEmpty(hiddenDevices.filter((hiddenDevice) => devicesState[hiddenDevice]))) {
+    // hidden devices contains a device that matches a current device; render null to hide children
     return null;
   }
 
+  // no matching hidden orientation or devices; render a styled
   return (
-    <StyledMedia hiddenBreakpoints={breakpoints} breakpoints={getBreakpoints(configState)}>
+    <StyledMedia
+      breakpoints={getBreakpoints(configState)}
+      hiddenBreakpoints={hiddenBreakpoints}
+      hiddenOrientation={hiddenOrientation}
+    >
       {children}
     </StyledMedia>
   );

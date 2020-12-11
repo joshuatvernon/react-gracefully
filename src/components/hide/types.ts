@@ -1,4 +1,4 @@
-import { Breakpoints, Device } from '../../stores';
+import { Breakpoints, Device, Orientation } from '../../stores';
 
 export interface HideProps {
   /**
@@ -13,9 +13,11 @@ export interface HideProps {
    * ```
    *
    * @description
-   * devices is a list of devices that should be hidden
+   * Optional list of devices that should be hidden
+   *
+   * If list of devices prop is passed breakpoints prop will be ignored
    */
-  devices: Device[];
+  devices?: Device[];
   /**
    * @example
    * ```react
@@ -28,12 +30,30 @@ export interface HideProps {
    * ```
    *
    * @description
-   * breakpoints is a list of breakpoints that should be hidden
+   * Optional list of breakpoints that should be hidden
+   *
+   * If list of devices prop is passed breakpoints prop will be ignored
    */
-  breakpoints: string[];
+  breakpoints?: string[];
+  /**
+   * @example
+   * ```react
+   * <Hide orientation={Orientation.Portait}>
+   *   <h1>Landscape Title</h1>
+   * </Hide>
+   * <Hide orientation={Orientation.Landscape}>
+   *   <h2>Portrait Title</h2>
+   * </Hide>
+   * ```
+   *
+   * @description
+   * Optional orienation that should be hidden
+   */
+  orientation?: Orientation;
 }
 
 export interface HideStyleProps {
-  hiddenBreakpoints: string[];
   breakpoints: Breakpoints;
+  hiddenBreakpoints: string[];
+  hiddenOrientation?: Orientation;
 }

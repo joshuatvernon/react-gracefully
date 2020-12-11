@@ -14,7 +14,6 @@
   <img src="./badges/badge-statements.svg" />
   <a href="https://bundlephobia.com/result?p=react-gracefully"><img src="https://img.shields.io/bundlephobia/minzip/react-gracefully.svg" /></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg"></a>
-  <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" /></a>
 </p>
 
 A library for gracefully rendering responsive React client or server side.
