@@ -2,10 +2,12 @@ import { defaultRegistry } from 'react-sweet-state';
 import { NextFunction, Request, Response } from 'express';
 import { Details } from 'express-useragent';
 import isEmpty from 'lodash.isempty';
+import isEqual from 'lodash.isequal';
 import isNil from 'lodash.isnil';
 import keys from 'lodash.keys';
 import uniq from 'lodash.uniq';
 
+import { UNKNOWN_DEVICE_TYPE } from '../../constants';
 import { configSelectors, configStore, DevicesState, globalSelectors, globalStore } from '../../stores';
 import { Config, isDeviceFunction } from './types';
 
@@ -52,10 +54,13 @@ export const express = (config?: Config) => (req: Request, _res: Response, next:
     }
 
     const deviceIsUnknown = !devices
+      .filter((device: string) => !isEqual(device, UNKNOWN_DEVICE_TYPE))
       .map((device: string) => devicesState[device])
       .some((isDevice: boolean) => isDevice);
     if (deviceIsUnknown) {
-      devicesState['unknown'] = true;
+      devicesState[UNKNOWN_DEVICE_TYPE] = true;
+    } else {
+      devicesState[UNKNOWN_DEVICE_TYPE] = false;
     }
 
     // Update global store devices

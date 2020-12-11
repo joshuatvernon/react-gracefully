@@ -1,15 +1,24 @@
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
+import isEmpty from 'lodash.isempty';
+import isEqual from 'lodash.isequal';
 import isNil from 'lodash.isnil';
 import keys from 'lodash.keys';
 
+import { Orientation } from '../../stores';
 import { ShowStyleProps } from './types';
 
 export const StyledMedia = styled.div`
   ${(props: ShowStyleProps) => {
-    const { shownBreakpoints, breakpoints } = props;
+    const { breakpoints, shownBreakpoints, shownOrientation } = props;
 
     const hiddenBreakpoints = keys(breakpoints).filter((breakpoint) => shownBreakpoints.includes(breakpoint));
+
+    const hiddenOrientation = !isNil(shownOrientation)
+      ? isEqual(shownOrientation, Orientation.Landscape)
+        ? Orientation.Portait
+        : Orientation.Landscape
+      : undefined;
 
     const mediaRules = hiddenBreakpoints
       .map((breakpoint: string) => {
@@ -24,9 +33,16 @@ export const StyledMedia = styled.div`
         if (max) {
           query += ` and (max-width: ${max})`;
         }
+        if (!isNil(hiddenOrientation)) {
+          query += ` and (orienation: ${hiddenOrientation})`;
+        }
         return query;
       })
       .filter((mediaRule) => !isNil(mediaRule));
+
+    if (!isNil(hiddenOrientation) && isEmpty(mediaRules)) {
+      mediaRules.push(`all and (orienation: ${hiddenOrientation})`);
+    }
 
     return css`
       @media ${mediaRules.join(', ')} {

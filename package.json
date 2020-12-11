@@ -46,8 +46,8 @@
     "tag:update-latest": "git tag -f \"$(npm run --silent tag:latest)\" \"$(npm run --silent tag:latest)\"^{} -a -m \"$(npm run --silent tag:build-annotated)\"",
     "test": "jest",
     "test:coverage": "jest --coverage",
-    "test:coverage:report": "npm run test:coverage && http-server -p 4001 ./coverage/lcov-report -c-1",
     "test:coverage:badges": "npm run test:coverage && jest-coverage-badges --output './badges' && git add badges/* && git commit -m 'Updated test coverage badges' || printf '\n\u001b[32mTest coverage badges not updated.\u001b[0m\n\n'",
+    "test:coverage:report": "npm run test:coverage && http-server -p 4001 ./coverage/lcov-report -c-1",
     "test:watch": "jest --watch",
     "preversion": "npm run lint",
     "version": "genversion --semi version.js && git add version.js",
@@ -72,6 +72,7 @@
     "to-px": "^1.1.0"
   },
   "devDependencies": {
+    "@emotion/jest": "^11.1.0",
     "@types/enzyme": "^3.10.8",
     "@types/express": "^4.17.9",
     "@types/express-useragent": "^1.0.0",
@@ -92,6 +93,7 @@
     "@typescript-eslint/parser": "^4.9.1",
     "@wojtekmaj/enzyme-adapter-react-17": "^0.3.2",
     "cbf": "^2.3.2",
+    "codecov": "^3.8.1",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.5",
     "enzyme-to-json": "^3.6.1",

@@ -1,53 +1,68 @@
 import React, { FunctionComponent } from 'react';
+import isEqual from 'lodash.isequal';
 import isNil from 'lodash.isnil';
 import keys from 'lodash.keys';
 import merge from 'lodash.merge';
 import uniq from 'lodash.uniq';
 
-import { DevicesState, globalSelectors, GlobalState, GlobalStoreContainer, useGlobalStore } from '../../stores';
-import { configSelectors, ConfigState, ConfigStoreContainer, Device, useConfigStore } from '../../stores/config';
-import { GracefulProviderProps, isDevicesState } from './types';
+import { UNKNOWN_DEVICE_TYPE } from '../../constants';
+import {
+  DevicesState,
+  globalSelectors,
+  GlobalState,
+  GlobalStoreContainer,
+  initialConfigState,
+  initialGlobalState
+} from '../../stores';
+import { configSelectors, ConfigState, ConfigStoreContainer, Device } from '../../stores/config';
+import { GraceProviderProps, isDevicesState } from './types';
 
-export const GracefulProvider: FunctionComponent<GracefulProviderProps> = (props) => {
-  const { devices: devicesOrDevicesState, breakpoints, children } = props;
-
-  const [configState] = useConfigStore();
+export const GraceProvider: FunctionComponent<GraceProviderProps> = (props) => {
+  const { devices: devicesOrDevicesState, breakpoints, window, children, scope } = props;
 
   const { getBreakpoints, getDevices } = configSelectors;
 
-  const [globalState] = useGlobalStore();
-
-  const { getDevicesState } = globalSelectors;
+  const { getWindowState, getDevicesState } = globalSelectors;
 
   let devices: Device[] = [];
-  let devicesState: DevicesState = getDevicesState(globalState);
+  let devicesState: DevicesState = getDevicesState(initialGlobalState);
+
   if (isDevicesState(devicesOrDevicesState)) {
     // `devicesOrDevicesState` is DevicesState
-    devicesState = merge(devicesState, devicesOrDevicesState);
-    devices = uniq(getDevices(configState).concat(keys(devicesState)));
+    devicesState = merge({}, devicesState, devicesOrDevicesState);
+    devices = uniq(getDevices(initialConfigState).concat(keys(devicesState)));
   } else if (!isNil(devicesOrDevicesState)) {
     // `devicesOrDevicesState` is Device[]
-    devices = uniq(getDevices(configState).concat(devicesOrDevicesState));
+    devices = uniq(getDevices(initialConfigState).concat(devicesOrDevicesState));
   }
 
-  const deviceIsUnknown = !devices.map((device: string) => devicesState[device]).some((isDevice: boolean) => isDevice);
+  const deviceIsUnknown = !devices
+    .filter((device: string) => !isEqual(device, UNKNOWN_DEVICE_TYPE))
+    .map((device: string) => devicesState[device])
+    .some((isDevice: boolean) => isDevice);
   if (deviceIsUnknown) {
-    devicesState['unknown'] = true;
+    devicesState[UNKNOWN_DEVICE_TYPE] = true;
+  } else {
+    devicesState[UNKNOWN_DEVICE_TYPE] = false;
   }
 
-  const initialConfigState: ConfigState = {
-    breakpoints: breakpoints ? breakpoints : getBreakpoints(configState),
+  const configState: ConfigState = {
+    breakpoints: !isNil(breakpoints) ? breakpoints : getBreakpoints(initialConfigState),
     devices
   };
 
-  const initialGlobalState: GlobalState = {
-    ...globalState,
+  // TODO: Add functionality to detect window "width", "height" and "orientation" and update
+  // window state when window state is NOT passed to provider
+  const globalState: GlobalState = {
+    window: !isNil(window) ? window : getWindowState(initialGlobalState),
     devices: devicesState
   };
 
   return (
-    <ConfigStoreContainer initialState={initialConfigState}>
-      <GlobalStoreContainer initialState={initialGlobalState}>{children}</GlobalStoreContainer>
+    <ConfigStoreContainer initialState={configState} scope={scope}>
+      <GlobalStoreContainer initialState={globalState} scope={scope}>
+        {children}
+      </GlobalStoreContainer>
     </ConfigStoreContainer>
   );
 };

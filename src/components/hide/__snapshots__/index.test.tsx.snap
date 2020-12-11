@@ -1,0 +1,1883 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components Hide adds hidden style when breakpoints are {"sm":{"max":"500px"},"md":{"min":"500px","max":"1000px"},"lg":{"min":"1000px"}} and hidden breakpoints are ["invalid"] and hidden orientation is landscape 1`] = `
+@media all and (orienation: landscape) {
+  .emotion-0 {
+    display: none;
+  }
+}
+
+<Hide
+  breakpoints={
+    Array [
+      "invalid",
+    ]
+  }
+  orientation="landscape"
+>
+  <Styled(div)
+    breakpoints={
+      Object {
+        "lg": Object {
+          "max": undefined,
+          "min": "1000px",
+        },
+        "md": Object {
+          "max": "1000px",
+          "min": "500px",
+        },
+        "sm": Object {
+          "max": "500px",
+          "min": undefined,
+        },
+      }
+    }
+    hiddenBreakpoints={
+      Array [
+        "invalid",
+      ]
+    }
+    hiddenOrientation="landscape"
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Hide>
+`;
+
+exports[`components Hide adds hidden style when breakpoints are {"sm":{"max":"500px"},"md":{"min":"500px","max":"1000px"},"lg":{"min":"1000px"}} and hidden breakpoints are ["invalid"] and hidden orientation is portrait 1`] = `
+@media all and (orienation: portrait) {
+  .emotion-0 {
+    display: none;
+  }
+}
+
+<Hide
+  breakpoints={
+    Array [
+      "invalid",
+    ]
+  }
+  orientation="portrait"
+>
+  <Styled(div)
+    breakpoints={
+      Object {
+        "lg": Object {
+          "max": undefined,
+          "min": "1000px",
+        },
+        "md": Object {
+          "max": "1000px",
+          "min": "500px",
+        },
+        "sm": Object {
+          "max": "500px",
+          "min": undefined,
+        },
+      }
+    }
+    hiddenBreakpoints={
+      Array [
+        "invalid",
+      ]
+    }
+    hiddenOrientation="portrait"
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Hide>
+`;
+
+exports[`components Hide adds hidden style when breakpoints are {"sm":{"max":"500px"},"md":{"min":"500px","max":"1000px"},"lg":{"min":"1000px"}} and hidden breakpoints are ["invalid"] and hidden orientation is undefined 1`] = `
+<Hide
+  breakpoints={
+    Array [
+      "invalid",
+    ]
+  }
+>
+  <Styled(div)
+    breakpoints={
+      Object {
+        "lg": Object {
+          "max": undefined,
+          "min": "1000px",
+        },
+        "md": Object {
+          "max": "1000px",
+          "min": "500px",
+        },
+        "sm": Object {
+          "max": "500px",
+          "min": undefined,
+        },
+      }
+    }
+    hiddenBreakpoints={
+      Array [
+        "invalid",
+      ]
+    }
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Hide>
+`;
+
+exports[`components Hide adds hidden style when breakpoints are {"sm":{"max":"500px"},"md":{"min":"500px","max":"1000px"},"lg":{"min":"1000px"}} and hidden breakpoints are ["lg"] and hidden orientation is landscape 1`] = `
+@media all and (min-width: 1000px) and (orienation: landscape) {
+  .emotion-0 {
+    display: none;
+  }
+}
+
+<Hide
+  breakpoints={
+    Array [
+      "lg",
+    ]
+  }
+  orientation="landscape"
+>
+  <Styled(div)
+    breakpoints={
+      Object {
+        "lg": Object {
+          "max": undefined,
+          "min": "1000px",
+        },
+        "md": Object {
+          "max": "1000px",
+          "min": "500px",
+        },
+        "sm": Object {
+          "max": "500px",
+          "min": undefined,
+        },
+      }
+    }
+    hiddenBreakpoints={
+      Array [
+        "lg",
+      ]
+    }
+    hiddenOrientation="landscape"
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Hide>
+`;
+
+exports[`components Hide adds hidden style when breakpoints are {"sm":{"max":"500px"},"md":{"min":"500px","max":"1000px"},"lg":{"min":"1000px"}} and hidden breakpoints are ["lg"] and hidden orientation is portrait 1`] = `
+@media all and (min-width: 1000px) and (orienation: portrait) {
+  .emotion-0 {
+    display: none;
+  }
+}
+
+<Hide
+  breakpoints={
+    Array [
+      "lg",
+    ]
+  }
+  orientation="portrait"
+>
+  <Styled(div)
+    breakpoints={
+      Object {
+        "lg": Object {
+          "max": undefined,
+          "min": "1000px",
+        },
+        "md": Object {
+          "max": "1000px",
+          "min": "500px",
+        },
+        "sm": Object {
+          "max": "500px",
+          "min": undefined,
+        },
+      }
+    }
+    hiddenBreakpoints={
+      Array [
+        "lg",
+      ]
+    }
+    hiddenOrientation="portrait"
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Hide>
+`;
+
+exports[`components Hide adds hidden style when breakpoints are {"sm":{"max":"500px"},"md":{"min":"500px","max":"1000px"},"lg":{"min":"1000px"}} and hidden breakpoints are ["lg"] and hidden orientation is undefined 1`] = `
+@media all and (min-width: 1000px) {
+  .emotion-0 {
+    display: none;
+  }
+}
+
+<Hide
+  breakpoints={
+    Array [
+      "lg",
+    ]
+  }
+>
+  <Styled(div)
+    breakpoints={
+      Object {
+        "lg": Object {
+          "max": undefined,
+          "min": "1000px",
+        },
+        "md": Object {
+          "max": "1000px",
+          "min": "500px",
+        },
+        "sm": Object {
+          "max": "500px",
+          "min": undefined,
+        },
+      }
+    }
+    hiddenBreakpoints={
+      Array [
+        "lg",
+      ]
+    }
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Hide>
+`;
+
+exports[`components Hide adds hidden style when breakpoints are {"sm":{"max":"500px"},"md":{"min":"500px","max":"1000px"},"lg":{"min":"1000px"}} and hidden breakpoints are ["md", "lg"] and hidden orientation is landscape 1`] = `
+@media all and (min-width: 500px) and (max-width: 1000px) and (orienation: landscape),all and (min-width: 1000px) and (orienation: landscape) {
+  .emotion-0 {
+    display: none;
+  }
+}
+
+<Hide
+  breakpoints={
+    Array [
+      "md",
+      "lg",
+    ]
+  }
+  orientation="landscape"
+>
+  <Styled(div)
+    breakpoints={
+      Object {
+        "lg": Object {
+          "max": undefined,
+          "min": "1000px",
+        },
+        "md": Object {
+          "max": "1000px",
+          "min": "500px",
+        },
+        "sm": Object {
+          "max": "500px",
+          "min": undefined,
+        },
+      }
+    }
+    hiddenBreakpoints={
+      Array [
+        "md",
+        "lg",
+      ]
+    }
+    hiddenOrientation="landscape"
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Hide>
+`;
+
+exports[`components Hide adds hidden style when breakpoints are {"sm":{"max":"500px"},"md":{"min":"500px","max":"1000px"},"lg":{"min":"1000px"}} and hidden breakpoints are ["md", "lg"] and hidden orientation is portrait 1`] = `
+@media all and (min-width: 500px) and (max-width: 1000px) and (orienation: portrait),all and (min-width: 1000px) and (orienation: portrait) {
+  .emotion-0 {
+    display: none;
+  }
+}
+
+<Hide
+  breakpoints={
+    Array [
+      "md",
+      "lg",
+    ]
+  }
+  orientation="portrait"
+>
+  <Styled(div)
+    breakpoints={
+      Object {
+        "lg": Object {
+          "max": undefined,
+          "min": "1000px",
+        },
+        "md": Object {
+          "max": "1000px",
+          "min": "500px",
+        },
+        "sm": Object {
+          "max": "500px",
+          "min": undefined,
+        },
+      }
+    }
+    hiddenBreakpoints={
+      Array [
+        "md",
+        "lg",
+      ]
+    }
+    hiddenOrientation="portrait"
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Hide>
+`;
+
+exports[`components Hide adds hidden style when breakpoints are {"sm":{"max":"500px"},"md":{"min":"500px","max":"1000px"},"lg":{"min":"1000px"}} and hidden breakpoints are ["md", "lg"] and hidden orientation is undefined 1`] = `
+@media all and (min-width: 500px) and (max-width: 1000px),all and (min-width: 1000px) {
+  .emotion-0 {
+    display: none;
+  }
+}
+
+<Hide
+  breakpoints={
+    Array [
+      "md",
+      "lg",
+    ]
+  }
+>
+  <Styled(div)
+    breakpoints={
+      Object {
+        "lg": Object {
+          "max": undefined,
+          "min": "1000px",
+        },
+        "md": Object {
+          "max": "1000px",
+          "min": "500px",
+        },
+        "sm": Object {
+          "max": "500px",
+          "min": undefined,
+        },
+      }
+    }
+    hiddenBreakpoints={
+      Array [
+        "md",
+        "lg",
+      ]
+    }
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Hide>
+`;
+
+exports[`components Hide adds hidden style when breakpoints are {"sm":{"max":"500px"},"md":{"min":"500px","max":"1000px"},"lg":{"min":"1000px"}} and hidden breakpoints are ["md"] and hidden orientation is landscape 1`] = `
+@media all and (min-width: 500px) and (max-width: 1000px) and (orienation: landscape) {
+  .emotion-0 {
+    display: none;
+  }
+}
+
+<Hide
+  breakpoints={
+    Array [
+      "md",
+    ]
+  }
+  orientation="landscape"
+>
+  <Styled(div)
+    breakpoints={
+      Object {
+        "lg": Object {
+          "max": undefined,
+          "min": "1000px",
+        },
+        "md": Object {
+          "max": "1000px",
+          "min": "500px",
+        },
+        "sm": Object {
+          "max": "500px",
+          "min": undefined,
+        },
+      }
+    }
+    hiddenBreakpoints={
+      Array [
+        "md",
+      ]
+    }
+    hiddenOrientation="landscape"
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Hide>
+`;
+
+exports[`components Hide adds hidden style when breakpoints are {"sm":{"max":"500px"},"md":{"min":"500px","max":"1000px"},"lg":{"min":"1000px"}} and hidden breakpoints are ["md"] and hidden orientation is portrait 1`] = `
+@media all and (min-width: 500px) and (max-width: 1000px) and (orienation: portrait) {
+  .emotion-0 {
+    display: none;
+  }
+}
+
+<Hide
+  breakpoints={
+    Array [
+      "md",
+    ]
+  }
+  orientation="portrait"
+>
+  <Styled(div)
+    breakpoints={
+      Object {
+        "lg": Object {
+          "max": undefined,
+          "min": "1000px",
+        },
+        "md": Object {
+          "max": "1000px",
+          "min": "500px",
+        },
+        "sm": Object {
+          "max": "500px",
+          "min": undefined,
+        },
+      }
+    }
+    hiddenBreakpoints={
+      Array [
+        "md",
+      ]
+    }
+    hiddenOrientation="portrait"
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Hide>
+`;
+
+exports[`components Hide adds hidden style when breakpoints are {"sm":{"max":"500px"},"md":{"min":"500px","max":"1000px"},"lg":{"min":"1000px"}} and hidden breakpoints are ["md"] and hidden orientation is undefined 1`] = `
+@media all and (min-width: 500px) and (max-width: 1000px) {
+  .emotion-0 {
+    display: none;
+  }
+}
+
+<Hide
+  breakpoints={
+    Array [
+      "md",
+    ]
+  }
+>
+  <Styled(div)
+    breakpoints={
+      Object {
+        "lg": Object {
+          "max": undefined,
+          "min": "1000px",
+        },
+        "md": Object {
+          "max": "1000px",
+          "min": "500px",
+        },
+        "sm": Object {
+          "max": "500px",
+          "min": undefined,
+        },
+      }
+    }
+    hiddenBreakpoints={
+      Array [
+        "md",
+      ]
+    }
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Hide>
+`;
+
+exports[`components Hide adds hidden style when breakpoints are {"sm":{"max":"500px"},"md":{"min":"500px","max":"1000px"},"lg":{"min":"1000px"}} and hidden breakpoints are ["sm", "md", "lg"] and hidden orientation is landscape 1`] = `
+@media all and (max-width: 500px) and (orienation: landscape),all and (min-width: 500px) and (max-width: 1000px) and (orienation: landscape),all and (min-width: 1000px) and (orienation: landscape) {
+  .emotion-0 {
+    display: none;
+  }
+}
+
+<Hide
+  breakpoints={
+    Array [
+      "sm",
+      "md",
+      "lg",
+    ]
+  }
+  orientation="landscape"
+>
+  <Styled(div)
+    breakpoints={
+      Object {
+        "lg": Object {
+          "max": undefined,
+          "min": "1000px",
+        },
+        "md": Object {
+          "max": "1000px",
+          "min": "500px",
+        },
+        "sm": Object {
+          "max": "500px",
+          "min": undefined,
+        },
+      }
+    }
+    hiddenBreakpoints={
+      Array [
+        "sm",
+        "md",
+        "lg",
+      ]
+    }
+    hiddenOrientation="landscape"
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Hide>
+`;
+
+exports[`components Hide adds hidden style when breakpoints are {"sm":{"max":"500px"},"md":{"min":"500px","max":"1000px"},"lg":{"min":"1000px"}} and hidden breakpoints are ["sm", "md", "lg"] and hidden orientation is portrait 1`] = `
+@media all and (max-width: 500px) and (orienation: portrait),all and (min-width: 500px) and (max-width: 1000px) and (orienation: portrait),all and (min-width: 1000px) and (orienation: portrait) {
+  .emotion-0 {
+    display: none;
+  }
+}
+
+<Hide
+  breakpoints={
+    Array [
+      "sm",
+      "md",
+      "lg",
+    ]
+  }
+  orientation="portrait"
+>
+  <Styled(div)
+    breakpoints={
+      Object {
+        "lg": Object {
+          "max": undefined,
+          "min": "1000px",
+        },
+        "md": Object {
+          "max": "1000px",
+          "min": "500px",
+        },
+        "sm": Object {
+          "max": "500px",
+          "min": undefined,
+        },
+      }
+    }
+    hiddenBreakpoints={
+      Array [
+        "sm",
+        "md",
+        "lg",
+      ]
+    }
+    hiddenOrientation="portrait"
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Hide>
+`;
+
+exports[`components Hide adds hidden style when breakpoints are {"sm":{"max":"500px"},"md":{"min":"500px","max":"1000px"},"lg":{"min":"1000px"}} and hidden breakpoints are ["sm", "md", "lg"] and hidden orientation is undefined 1`] = `
+@media all and (max-width: 500px),all and (min-width: 500px) and (max-width: 1000px),all and (min-width: 1000px) {
+  .emotion-0 {
+    display: none;
+  }
+}
+
+<Hide
+  breakpoints={
+    Array [
+      "sm",
+      "md",
+      "lg",
+    ]
+  }
+>
+  <Styled(div)
+    breakpoints={
+      Object {
+        "lg": Object {
+          "max": undefined,
+          "min": "1000px",
+        },
+        "md": Object {
+          "max": "1000px",
+          "min": "500px",
+        },
+        "sm": Object {
+          "max": "500px",
+          "min": undefined,
+        },
+      }
+    }
+    hiddenBreakpoints={
+      Array [
+        "sm",
+        "md",
+        "lg",
+      ]
+    }
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Hide>
+`;
+
+exports[`components Hide adds hidden style when breakpoints are {"sm":{"max":"500px"},"md":{"min":"500px","max":"1000px"},"lg":{"min":"1000px"}} and hidden breakpoints are ["sm", "md"] and hidden orientation is landscape 1`] = `
+@media all and (max-width: 500px) and (orienation: landscape),all and (min-width: 500px) and (max-width: 1000px) and (orienation: landscape) {
+  .emotion-0 {
+    display: none;
+  }
+}
+
+<Hide
+  breakpoints={
+    Array [
+      "sm",
+      "md",
+    ]
+  }
+  orientation="landscape"
+>
+  <Styled(div)
+    breakpoints={
+      Object {
+        "lg": Object {
+          "max": undefined,
+          "min": "1000px",
+        },
+        "md": Object {
+          "max": "1000px",
+          "min": "500px",
+        },
+        "sm": Object {
+          "max": "500px",
+          "min": undefined,
+        },
+      }
+    }
+    hiddenBreakpoints={
+      Array [
+        "sm",
+        "md",
+      ]
+    }
+    hiddenOrientation="landscape"
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Hide>
+`;
+
+exports[`components Hide adds hidden style when breakpoints are {"sm":{"max":"500px"},"md":{"min":"500px","max":"1000px"},"lg":{"min":"1000px"}} and hidden breakpoints are ["sm", "md"] and hidden orientation is portrait 1`] = `
+@media all and (max-width: 500px) and (orienation: portrait),all and (min-width: 500px) and (max-width: 1000px) and (orienation: portrait) {
+  .emotion-0 {
+    display: none;
+  }
+}
+
+<Hide
+  breakpoints={
+    Array [
+      "sm",
+      "md",
+    ]
+  }
+  orientation="portrait"
+>
+  <Styled(div)
+    breakpoints={
+      Object {
+        "lg": Object {
+          "max": undefined,
+          "min": "1000px",
+        },
+        "md": Object {
+          "max": "1000px",
+          "min": "500px",
+        },
+        "sm": Object {
+          "max": "500px",
+          "min": undefined,
+        },
+      }
+    }
+    hiddenBreakpoints={
+      Array [
+        "sm",
+        "md",
+      ]
+    }
+    hiddenOrientation="portrait"
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Hide>
+`;
+
+exports[`components Hide adds hidden style when breakpoints are {"sm":{"max":"500px"},"md":{"min":"500px","max":"1000px"},"lg":{"min":"1000px"}} and hidden breakpoints are ["sm", "md"] and hidden orientation is undefined 1`] = `
+@media all and (max-width: 500px),all and (min-width: 500px) and (max-width: 1000px) {
+  .emotion-0 {
+    display: none;
+  }
+}
+
+<Hide
+  breakpoints={
+    Array [
+      "sm",
+      "md",
+    ]
+  }
+>
+  <Styled(div)
+    breakpoints={
+      Object {
+        "lg": Object {
+          "max": undefined,
+          "min": "1000px",
+        },
+        "md": Object {
+          "max": "1000px",
+          "min": "500px",
+        },
+        "sm": Object {
+          "max": "500px",
+          "min": undefined,
+        },
+      }
+    }
+    hiddenBreakpoints={
+      Array [
+        "sm",
+        "md",
+      ]
+    }
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Hide>
+`;
+
+exports[`components Hide adds hidden style when breakpoints are {"sm":{"max":"500px"},"md":{"min":"500px","max":"1000px"},"lg":{"min":"1000px"}} and hidden breakpoints are ["sm"] and hidden orientation is landscape 1`] = `
+@media all and (max-width: 500px) and (orienation: landscape) {
+  .emotion-0 {
+    display: none;
+  }
+}
+
+<Hide
+  breakpoints={
+    Array [
+      "sm",
+    ]
+  }
+  orientation="landscape"
+>
+  <Styled(div)
+    breakpoints={
+      Object {
+        "lg": Object {
+          "max": undefined,
+          "min": "1000px",
+        },
+        "md": Object {
+          "max": "1000px",
+          "min": "500px",
+        },
+        "sm": Object {
+          "max": "500px",
+          "min": undefined,
+        },
+      }
+    }
+    hiddenBreakpoints={
+      Array [
+        "sm",
+      ]
+    }
+    hiddenOrientation="landscape"
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Hide>
+`;
+
+exports[`components Hide adds hidden style when breakpoints are {"sm":{"max":"500px"},"md":{"min":"500px","max":"1000px"},"lg":{"min":"1000px"}} and hidden breakpoints are ["sm"] and hidden orientation is portrait 1`] = `
+@media all and (max-width: 500px) and (orienation: portrait) {
+  .emotion-0 {
+    display: none;
+  }
+}
+
+<Hide
+  breakpoints={
+    Array [
+      "sm",
+    ]
+  }
+  orientation="portrait"
+>
+  <Styled(div)
+    breakpoints={
+      Object {
+        "lg": Object {
+          "max": undefined,
+          "min": "1000px",
+        },
+        "md": Object {
+          "max": "1000px",
+          "min": "500px",
+        },
+        "sm": Object {
+          "max": "500px",
+          "min": undefined,
+        },
+      }
+    }
+    hiddenBreakpoints={
+      Array [
+        "sm",
+      ]
+    }
+    hiddenOrientation="portrait"
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Hide>
+`;
+
+exports[`components Hide adds hidden style when breakpoints are {"sm":{"max":"500px"},"md":{"min":"500px","max":"1000px"},"lg":{"min":"1000px"}} and hidden breakpoints are ["sm"] and hidden orientation is undefined 1`] = `
+@media all and (max-width: 500px) {
+  .emotion-0 {
+    display: none;
+  }
+}
+
+<Hide
+  breakpoints={
+    Array [
+      "sm",
+    ]
+  }
+>
+  <Styled(div)
+    breakpoints={
+      Object {
+        "lg": Object {
+          "max": undefined,
+          "min": "1000px",
+        },
+        "md": Object {
+          "max": "1000px",
+          "min": "500px",
+        },
+        "sm": Object {
+          "max": "500px",
+          "min": undefined,
+        },
+      }
+    }
+    hiddenBreakpoints={
+      Array [
+        "sm",
+      ]
+    }
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Hide>
+`;
+
+exports[`components Hide adds hidden style when breakpoints are {"sm":{"max":"500px"},"md":{"min":"500px","max":"1000px"},"lg":{"min":"1000px"}} and hidden breakpoints are [] and hidden orientation is landscape 1`] = `
+@media all and (orienation: landscape) {
+  .emotion-0 {
+    display: none;
+  }
+}
+
+<Hide
+  breakpoints={Array []}
+  orientation="landscape"
+>
+  <Styled(div)
+    breakpoints={
+      Object {
+        "lg": Object {
+          "max": undefined,
+          "min": "1000px",
+        },
+        "md": Object {
+          "max": "1000px",
+          "min": "500px",
+        },
+        "sm": Object {
+          "max": "500px",
+          "min": undefined,
+        },
+      }
+    }
+    hiddenBreakpoints={Array []}
+    hiddenOrientation="landscape"
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Hide>
+`;
+
+exports[`components Hide adds hidden style when breakpoints are {"sm":{"max":"500px"},"md":{"min":"500px","max":"1000px"},"lg":{"min":"1000px"}} and hidden breakpoints are [] and hidden orientation is portrait 1`] = `
+@media all and (orienation: portrait) {
+  .emotion-0 {
+    display: none;
+  }
+}
+
+<Hide
+  breakpoints={Array []}
+  orientation="portrait"
+>
+  <Styled(div)
+    breakpoints={
+      Object {
+        "lg": Object {
+          "max": undefined,
+          "min": "1000px",
+        },
+        "md": Object {
+          "max": "1000px",
+          "min": "500px",
+        },
+        "sm": Object {
+          "max": "500px",
+          "min": undefined,
+        },
+      }
+    }
+    hiddenBreakpoints={Array []}
+    hiddenOrientation="portrait"
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Hide>
+`;
+
+exports[`components Hide adds hidden style when breakpoints are {"sm":{"max":"500px"},"md":{"min":"500px","max":"1000px"},"lg":{"min":"1000px"}} and hidden breakpoints are [] and hidden orientation is undefined 1`] = `
+<Hide
+  breakpoints={Array []}
+>
+  <Styled(div)
+    breakpoints={
+      Object {
+        "lg": Object {
+          "max": undefined,
+          "min": "1000px",
+        },
+        "md": Object {
+          "max": "1000px",
+          "min": "500px",
+        },
+        "sm": Object {
+          "max": "500px",
+          "min": undefined,
+        },
+      }
+    }
+    hiddenBreakpoints={Array []}
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Hide>
+`;
+
+exports[`components Hide adds hidden style when breakpoints are {"sm":{"max":"500px"},"md":{"min":"500px","max":"1000px"},"lg":{"min":"1000px"}} and hidden breakpoints are undefined and hidden orientation is landscape 1`] = `
+@media all and (orienation: landscape) {
+  .emotion-0 {
+    display: none;
+  }
+}
+
+<Hide
+  orientation="landscape"
+>
+  <Styled(div)
+    breakpoints={
+      Object {
+        "lg": Object {
+          "max": undefined,
+          "min": "1000px",
+        },
+        "md": Object {
+          "max": "1000px",
+          "min": "500px",
+        },
+        "sm": Object {
+          "max": "500px",
+          "min": undefined,
+        },
+      }
+    }
+    hiddenBreakpoints={Array []}
+    hiddenOrientation="landscape"
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Hide>
+`;
+
+exports[`components Hide adds hidden style when breakpoints are {"sm":{"max":"500px"},"md":{"min":"500px","max":"1000px"},"lg":{"min":"1000px"}} and hidden breakpoints are undefined and hidden orientation is portrait 1`] = `
+@media all and (orienation: portrait) {
+  .emotion-0 {
+    display: none;
+  }
+}
+
+<Hide
+  orientation="portrait"
+>
+  <Styled(div)
+    breakpoints={
+      Object {
+        "lg": Object {
+          "max": undefined,
+          "min": "1000px",
+        },
+        "md": Object {
+          "max": "1000px",
+          "min": "500px",
+        },
+        "sm": Object {
+          "max": "500px",
+          "min": undefined,
+        },
+      }
+    }
+    hiddenBreakpoints={Array []}
+    hiddenOrientation="portrait"
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Hide>
+`;
+
+exports[`components Hide adds hidden style when breakpoints are {"sm":{"max":"500px"},"md":{"min":"500px","max":"1000px"},"lg":{"min":"1000px"}} and hidden breakpoints are undefined and hidden orientation is undefined 1`] = `
+<Hide>
+  <Styled(div)
+    breakpoints={
+      Object {
+        "lg": Object {
+          "max": undefined,
+          "min": "1000px",
+        },
+        "md": Object {
+          "max": "1000px",
+          "min": "500px",
+        },
+        "sm": Object {
+          "max": "500px",
+          "min": undefined,
+        },
+      }
+    }
+    hiddenBreakpoints={Array []}
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Hide>
+`;
+
+exports[`components Hide does NOT hide content when hidden devices are ["desktop"] and current devices are ["mobile", "android"] 1`] = `
+<Hide
+  devices={
+    Array [
+      "desktop",
+    ]
+  }
+>
+  <Styled(div)
+    breakpoints={Object {}}
+    hiddenBreakpoints={Array []}
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Hide>
+`;
+
+exports[`components Hide does NOT hide content when hidden devices are ["desktop"] and current devices are ["mobile"] 1`] = `
+<Hide
+  devices={
+    Array [
+      "desktop",
+    ]
+  }
+>
+  <Styled(div)
+    breakpoints={Object {}}
+    hiddenBreakpoints={Array []}
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Hide>
+`;
+
+exports[`components Hide does NOT hide content when hidden devices are ["desktop"] and current devices are ["tablet"] 1`] = `
+<Hide
+  devices={
+    Array [
+      "desktop",
+    ]
+  }
+>
+  <Styled(div)
+    breakpoints={Object {}}
+    hiddenBreakpoints={Array []}
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Hide>
+`;
+
+exports[`components Hide does NOT hide content when hidden devices are ["desktop"] and current devices are ["unknown"] 1`] = `
+<Hide
+  devices={
+    Array [
+      "desktop",
+    ]
+  }
+>
+  <Styled(div)
+    breakpoints={Object {}}
+    hiddenBreakpoints={Array []}
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Hide>
+`;
+
+exports[`components Hide does NOT hide content when hidden devices are ["ios"] and current devices are ["desktop"] 1`] = `
+<Hide
+  devices={
+    Array [
+      "ios",
+    ]
+  }
+>
+  <Styled(div)
+    breakpoints={Object {}}
+    hiddenBreakpoints={Array []}
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Hide>
+`;
+
+exports[`components Hide does NOT hide content when hidden devices are ["ios"] and current devices are ["mobile"] 1`] = `
+<Hide
+  devices={
+    Array [
+      "ios",
+    ]
+  }
+>
+  <Styled(div)
+    breakpoints={Object {}}
+    hiddenBreakpoints={Array []}
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Hide>
+`;
+
+exports[`components Hide does NOT hide content when hidden devices are ["ios"] and current devices are ["tablet"] 1`] = `
+<Hide
+  devices={
+    Array [
+      "ios",
+    ]
+  }
+>
+  <Styled(div)
+    breakpoints={Object {}}
+    hiddenBreakpoints={Array []}
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Hide>
+`;
+
+exports[`components Hide does NOT hide content when hidden devices are ["ios"] and current devices are ["unknown"] 1`] = `
+<Hide
+  devices={
+    Array [
+      "ios",
+    ]
+  }
+>
+  <Styled(div)
+    breakpoints={Object {}}
+    hiddenBreakpoints={Array []}
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Hide>
+`;
+
+exports[`components Hide does NOT hide content when hidden devices are ["mobile"] and current devices are ["desktop"] 1`] = `
+<Hide
+  devices={
+    Array [
+      "mobile",
+    ]
+  }
+>
+  <Styled(div)
+    breakpoints={Object {}}
+    hiddenBreakpoints={Array []}
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Hide>
+`;
+
+exports[`components Hide does NOT hide content when hidden devices are ["mobile"] and current devices are ["tablet", "ipad"] 1`] = `
+<Hide
+  devices={
+    Array [
+      "mobile",
+    ]
+  }
+>
+  <Styled(div)
+    breakpoints={Object {}}
+    hiddenBreakpoints={Array []}
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Hide>
+`;
+
+exports[`components Hide does NOT hide content when hidden devices are ["mobile"] and current devices are ["tablet"] 1`] = `
+<Hide
+  devices={
+    Array [
+      "mobile",
+    ]
+  }
+>
+  <Styled(div)
+    breakpoints={Object {}}
+    hiddenBreakpoints={Array []}
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Hide>
+`;
+
+exports[`components Hide does NOT hide content when hidden devices are ["mobile"] and current devices are ["unknown"] 1`] = `
+<Hide
+  devices={
+    Array [
+      "mobile",
+    ]
+  }
+>
+  <Styled(div)
+    breakpoints={Object {}}
+    hiddenBreakpoints={Array []}
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Hide>
+`;
+
+exports[`components Hide does NOT hide content when hidden devices are ["tablet"] and current devices are ["desktop"] 1`] = `
+<Hide
+  devices={
+    Array [
+      "tablet",
+    ]
+  }
+>
+  <Styled(div)
+    breakpoints={Object {}}
+    hiddenBreakpoints={Array []}
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Hide>
+`;
+
+exports[`components Hide does NOT hide content when hidden devices are ["tablet"] and current devices are ["mobile", "android"] 1`] = `
+<Hide
+  devices={
+    Array [
+      "tablet",
+    ]
+  }
+>
+  <Styled(div)
+    breakpoints={Object {}}
+    hiddenBreakpoints={Array []}
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Hide>
+`;
+
+exports[`components Hide does NOT hide content when hidden devices are ["tablet"] and current devices are ["mobile"] 1`] = `
+<Hide
+  devices={
+    Array [
+      "tablet",
+    ]
+  }
+>
+  <Styled(div)
+    breakpoints={Object {}}
+    hiddenBreakpoints={Array []}
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Hide>
+`;
+
+exports[`components Hide does NOT hide content when hidden devices are ["tablet"] and current devices are ["unknown"] 1`] = `
+<Hide
+  devices={
+    Array [
+      "tablet",
+    ]
+  }
+>
+  <Styled(div)
+    breakpoints={Object {}}
+    hiddenBreakpoints={Array []}
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Hide>
+`;
+
+exports[`components Hide does NOT hide content when hidden devices are ["unknown"] and current devices are ["desktop"] 1`] = `
+<Hide
+  devices={
+    Array [
+      "unknown",
+    ]
+  }
+>
+  <Styled(div)
+    breakpoints={Object {}}
+    hiddenBreakpoints={Array []}
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Hide>
+`;
+
+exports[`components Hide does NOT hide content when hidden devices are ["unknown"] and current devices are ["mobile"] 1`] = `
+<Hide
+  devices={
+    Array [
+      "unknown",
+    ]
+  }
+>
+  <Styled(div)
+    breakpoints={Object {}}
+    hiddenBreakpoints={Array []}
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Hide>
+`;
+
+exports[`components Hide does NOT hide content when hidden devices are ["unknown"] and current devices are ["tablet"] 1`] = `
+<Hide
+  devices={
+    Array [
+      "unknown",
+    ]
+  }
+>
+  <Styled(div)
+    breakpoints={Object {}}
+    hiddenBreakpoints={Array []}
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Hide>
+`;
+
+exports[`components Hide does NOT hide content when hidden devices are [] and current devices are ["desktop"] 1`] = `
+<Hide
+  devices={Array []}
+>
+  <Styled(div)
+    breakpoints={Object {}}
+    hiddenBreakpoints={Array []}
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Hide>
+`;
+
+exports[`components Hide does NOT hide content when hidden devices are [] and current devices are ["mobile"] 1`] = `
+<Hide
+  devices={Array []}
+>
+  <Styled(div)
+    breakpoints={Object {}}
+    hiddenBreakpoints={Array []}
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Hide>
+`;
+
+exports[`components Hide does NOT hide content when hidden devices are [] and current devices are ["tablet"] 1`] = `
+<Hide
+  devices={Array []}
+>
+  <Styled(div)
+    breakpoints={Object {}}
+    hiddenBreakpoints={Array []}
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Hide>
+`;
+
+exports[`components Hide does NOT hide content when hidden devices are [] and current devices are ["unknown"] 1`] = `
+<Hide
+  devices={Array []}
+>
+  <Styled(div)
+    breakpoints={Object {}}
+    hiddenBreakpoints={Array []}
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Hide>
+`;
+
+exports[`components Hide hides content when hidden devices are ["android"] and current devices are ["mobile", "android"] 1`] = `
+<Hide
+  devices={
+    Array [
+      "android",
+    ]
+  }
+/>
+`;
+
+exports[`components Hide hides content when hidden devices are ["desktop"] and current devices are ["desktop"] 1`] = `
+<Hide
+  devices={
+    Array [
+      "desktop",
+    ]
+  }
+/>
+`;
+
+exports[`components Hide hides content when hidden devices are ["mobile", "android", "ios"] and current devices are ["mobile", "android"] 1`] = `
+<Hide
+  devices={
+    Array [
+      "mobile",
+      "android",
+      "ios",
+    ]
+  }
+/>
+`;
+
+exports[`components Hide hides content when hidden devices are ["mobile", "android"] and current devices are ["mobile", "android"] 1`] = `
+<Hide
+  devices={
+    Array [
+      "mobile",
+      "android",
+    ]
+  }
+/>
+`;
+
+exports[`components Hide hides content when hidden devices are ["mobile"] and current devices are ["mobile", "android"] 1`] = `
+<Hide
+  devices={
+    Array [
+      "mobile",
+    ]
+  }
+/>
+`;
+
+exports[`components Hide hides content when hidden devices are ["mobile"] and current devices are ["mobile"] 1`] = `
+<Hide
+  devices={
+    Array [
+      "mobile",
+    ]
+  }
+/>
+`;
+
+exports[`components Hide hides content when hidden devices are ["tablet"] and current devices are ["tablet"] 1`] = `
+<Hide
+  devices={
+    Array [
+      "tablet",
+    ]
+  }
+/>
+`;
+
+exports[`components Hide hides content when hidden devices are ["unknown"] and current devices are ["unknown"] 1`] = `
+<Hide
+  devices={
+    Array [
+      "unknown",
+    ]
+  }
+/>
+`;

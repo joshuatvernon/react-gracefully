@@ -6,7 +6,8 @@
       "express",
       "react",
       "react-dom",
-      "jest"
+      "jest",
+      "@emotion/jest"
     ],
     "target": "es5",
     "module": "commonjs",

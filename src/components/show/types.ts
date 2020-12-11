@@ -1,4 +1,4 @@
-import { Breakpoints, Device } from '../../stores';
+import { Breakpoints, Device, Orientation } from '../../stores';
 
 export interface ShowProps {
   /**
@@ -13,9 +13,11 @@ export interface ShowProps {
    * ```
    *
    * @description
-   * devices is a list of devices that should be shown
+   * Optional list of devices that should be shown
+   *
+   * If list of devices prop is passed breakpoints prop will be ignored
    */
-  devices: Device[];
+  devices?: Device[];
   /**
    * @example
    * ```react
@@ -28,12 +30,30 @@ export interface ShowProps {
    * ```
    *
    * @description
-   * breakpoints is a list of breakpoints that should be shown
+   * Optional list of breakpoints that should be shown
+   *
+   * If list of devices prop is passed breakpoints prop will be ignored
    */
-  breakpoints: string[];
+  breakpoints?: string[];
+  /**
+   * @example
+   * ```react
+   * <Show orientation={Orientation.Portait}>
+   *   <h2>Portrait Title</h2>
+   * </Show>
+   * <Show orientation={Orientation.Landscape}>
+   *   <h1>Landscape Title</h1>
+   * </Show>
+   * ```
+   *
+   * @description
+   * Optional orienation that should be shown
+   */
+  orientation?: Orientation;
 }
 
 export interface ShowStyleProps {
-  shownBreakpoints: string[];
   breakpoints: Breakpoints;
+  shownBreakpoints: string[];
+  shownOrientation?: Orientation;
 }

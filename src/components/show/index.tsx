@@ -6,7 +6,12 @@ import { StyledMedia } from './styles';
 import { ShowProps } from './types';
 
 export const Show: FunctionComponent<ShowProps> = (props) => {
-  const { breakpoints = [], devices = [], children } = props;
+  const {
+    devices: shownDevices = [],
+    breakpoints: shownBreakpoints = [],
+    orientation: shownOrientation,
+    children
+  } = props;
 
   const [configState] = useConfigStore();
   const [globalState] = useGlobalStore();
@@ -16,12 +21,16 @@ export const Show: FunctionComponent<ShowProps> = (props) => {
 
   const devicesState = getDevicesState(globalState);
 
-  if (!isEmpty(devices) && isEmpty(devices.filter((device) => devicesState[device]))) {
+  if (!isEmpty(shownDevices) && isEmpty(shownDevices.filter((shownDevice) => devicesState[shownDevice]))) {
     return null;
   }
 
   return (
-    <StyledMedia shownBreakpoints={breakpoints} breakpoints={getBreakpoints(configState)}>
+    <StyledMedia
+      breakpoints={getBreakpoints(configState)}
+      shownBreakpoints={shownBreakpoints}
+      shownOrientation={shownOrientation}
+    >
       {children}
     </StyledMedia>
   );

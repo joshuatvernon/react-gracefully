@@ -1,5 +1,7 @@
 import { StoreActionApi } from 'react-sweet-state';
 
+import { UNKNOWN_DEVICE_TYPE } from '../../constants';
+
 export interface Breakpoint {
   min: undefined | string;
   max: undefined | string;
@@ -9,7 +11,7 @@ export interface Breakpoints {
   [key: string]: Breakpoint;
 }
 
-export type Device = 'mobile' | 'tablet' | 'desktop' | 'unknown' | string;
+export type Device = 'mobile' | 'tablet' | 'desktop' | typeof UNKNOWN_DEVICE_TYPE | string;
 
 export interface ConfigState {
   breakpoints: Breakpoints;

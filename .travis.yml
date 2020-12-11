@@ -13,6 +13,7 @@ script:
   - 'echo build version: $BUILD_VERSION'
   - npm run lint || travis_terminate 1
   - npm run test || travis_terminate 1
+  - codecov
 deploy:
   provider: npm
   email: joshuatvernon@gmail.com

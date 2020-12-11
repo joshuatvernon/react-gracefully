@@ -147,6 +147,7 @@ describe('middleware', () => {
         ...initialGlobalState,
         devices: {
           ...initialGlobalState.devices,
+          unknown: false,
           mobile: true
         }
       });
@@ -166,6 +167,7 @@ describe('middleware', () => {
         ...initialGlobalState,
         devices: {
           ...initialGlobalState.devices,
+          unknown: false,
           tablet: true
         }
       });
@@ -185,6 +187,7 @@ describe('middleware', () => {
         ...initialGlobalState,
         devices: {
           ...initialGlobalState.devices,
+          unknown: false,
           desktop: true
         }
       });
@@ -251,6 +254,7 @@ describe('middleware', () => {
         ...initialGlobalState,
         devices: {
           ...initialGlobalState.devices,
+          unknown: false,
           mobile: true
         }
       });
@@ -277,6 +281,7 @@ describe('middleware', () => {
         ...initialGlobalState,
         devices: {
           ...initialGlobalState.devices,
+          unknown: false,
           tablet: true
         }
       });
@@ -303,6 +308,7 @@ describe('middleware', () => {
         ...initialGlobalState,
         devices: {
           ...initialGlobalState.devices,
+          unknown: false,
           desktop: true
         }
       });
@@ -360,6 +366,7 @@ describe('middleware', () => {
         ...initialGlobalState,
         devices: {
           ...initialGlobalState.devices,
+          unknown: false,
           mobile: true
         }
       });
@@ -389,6 +396,7 @@ describe('middleware', () => {
         ...initialGlobalState,
         devices: {
           ...initialGlobalState.devices,
+          unknown: false,
           tablet: true
         }
       });
@@ -418,6 +426,7 @@ describe('middleware', () => {
         ...initialGlobalState,
         devices: {
           ...initialGlobalState.devices,
+          unknown: false,
           desktop: true
         }
       });

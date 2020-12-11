@@ -19,8 +19,5 @@ const ConfigStoreContainer = createContainer<ConfigState, ConfigActions, ConfigS
   onUpdate: () => ({ setState }, { initialState }) => setState(initialState)
 });
 
-export * from './actions';
-export * from './selectors';
-export * from './state';
 export * from './types';
-export { configStore, configSelectors, useConfigStore, ConfigStoreContainer };
+export { initialConfigState, configStore, configSelectors, useConfigStore, ConfigStoreContainer };
