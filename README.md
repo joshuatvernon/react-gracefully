@@ -1,8 +1,23 @@
 # react-gracefully 🦢
 
-**react-gracefully** is a utility for gracefully rendering responsive react code server side.
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/16813547/101833625-1bebd580-3aee-11eb-95b6-be06c2254207.png" alt="react-gracefully logo" height="150" />
+</p>
+<h1 align="center">react-gracefully</h1>
+<p align="center">
+  <a href="https://www.npmjs.com/package/react-gracefully"><img src="https://img.shields.io/npm/v/react-gracefully.svg"></a>
+  <a href="https://travis-ci.com/joshuatvernon/react-gracefully"><img src="https://travis-ci.com/joshuatvernon/react-gracefully.svg?branch=main"></a>
+  <a href="https://snyk.io/test/github/joshuatvernon/react-gracefully"><img src="https://snyk.io/test/github/joshuatvernon/react-gracefully/badge.svg" /><a/>
+  <img src="./badges/badge-branches.svg" />
+  <img src="./badges/badge-functions.svg" />
+  <img src="./badges/badge-lines.svg" />
+  <img src="./badges/badge-statements.svg" />
+  <a href="https://bundlephobia.com/result?p=react-gracefully"><img src="https://img.shields.io/bundlephobia/minzip/react-gracefully.svg" /></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg"></a>
+  <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" /></a>
+</p>
 
-[![npm version](https://badge.fury.io/js/react-gracefully.svg)](https://badge.fury.io/js/react-gracefully) [![Build Status](https://travis-ci.com/joshuatvernon/react-gracefully.svg?branch=main)](https://travis-ci.com/joshuatvernon/react-gracefully) ![branches](./badges/badge-branches.svg) ![functions](./badges/badge-functions.svg) ![lines](./badges/badge-lines.svg) ![statements](./badges/badge-statements.svg) [![vulnerabilities](https://snyk.io/test/github/joshuatvernon/react-gracefully/badge.svg)](https://snyk.io/test/github/joshuatvernon/react-gracefully)
+A library for gracefully rendering responsive React client or server side.
 
 ## ⚠️ Warning ⚠️
 
