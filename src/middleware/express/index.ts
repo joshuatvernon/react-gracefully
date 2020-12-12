@@ -1,7 +1,6 @@
 import { defaultRegistry } from 'react-sweet-state';
 import { NextFunction, Request, Response } from 'express';
 import { Details } from 'express-useragent';
-import isEqual from 'lodash.isequal';
 
 import { UNKNOWN_DEVICE_TYPE } from '../../constants';
 import { configSelectors, configStore, DevicesState, globalSelectors, globalStore } from '../../stores';
@@ -51,7 +50,7 @@ export const express = (config?: Config) => (req: Request, _res: Response, next:
     }
 
     const deviceIsUnknown = !devices
-      .filter((device: string) => !isEqual(device, UNKNOWN_DEVICE_TYPE))
+      .filter((device: string) => device !== UNKNOWN_DEVICE_TYPE)
       .map((device: string) => devicesState[device])
       .some((isDevice: boolean) => isDevice);
     if (deviceIsUnknown) {

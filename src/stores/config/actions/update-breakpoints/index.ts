@@ -1,5 +1,3 @@
-import isEqual from 'lodash.isequal';
-
 import { configSelectors } from '../../selectors';
 import { Breakpoints, ConfigStoreApi } from '../../types';
 
@@ -8,7 +6,7 @@ export const updateBreakpoints = (breakpoints: Breakpoints) => ({ getState, setS
 
   const { getBreakpoints } = configSelectors;
 
-  if (!isEqual(getBreakpoints(state), breakpoints)) {
+  if (getBreakpoints(state) !== breakpoints) {
     setState({
       ...state,
       breakpoints

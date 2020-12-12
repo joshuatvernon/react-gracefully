@@ -1,5 +1,3 @@
-import isEqual from 'lodash.isequal';
-
 import { globalSelectors } from '../../selectors';
 import { GlobalStoreApi, WindowState } from '../../types';
 
@@ -8,7 +6,7 @@ export const updateWindow = (window: WindowState) => ({ getState, setState }: Gl
 
   const { getWindowState } = globalSelectors;
 
-  if (!isEqual(getWindowState(state), window)) {
+  if (getWindowState(state) !== window) {
     setState({
       ...state,
       window
