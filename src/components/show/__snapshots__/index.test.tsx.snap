@@ -1,0 +1,1754 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components Show adds shown style when breakpoints are {"sm":{"max":"500px"},"md":{"min":"500px","max":"1000px"},"lg":{"min":"1000px"}} and shown breakpoints are ["invalid"] and shown orientation is landscape 1`] = `
+@media all and (max-width: 500px) and (orienation: portrait),all and (min-width: 500px) and (max-width: 1000px) and (orienation: portrait),all and (min-width: 1000px) and (orienation: portrait) {
+  .emotion-0 {
+    display: none;
+  }
+}
+
+<Show
+  breakpoints={
+    Array [
+      "invalid",
+    ]
+  }
+  orientation="landscape"
+>
+  <Styled(div)
+    breakpoints={
+      Object {
+        "lg": Object {
+          "max": undefined,
+          "min": "1000px",
+        },
+        "md": Object {
+          "max": "1000px",
+          "min": "500px",
+        },
+        "sm": Object {
+          "max": "500px",
+          "min": undefined,
+        },
+      }
+    }
+    shownBreakpoints={
+      Array [
+        "invalid",
+      ]
+    }
+    shownOrientation="landscape"
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Show>
+`;
+
+exports[`components Show adds shown style when breakpoints are {"sm":{"max":"500px"},"md":{"min":"500px","max":"1000px"},"lg":{"min":"1000px"}} and shown breakpoints are ["invalid"] and shown orientation is portrait 1`] = `
+@media all and (max-width: 500px) and (orienation: landscape),all and (min-width: 500px) and (max-width: 1000px) and (orienation: landscape),all and (min-width: 1000px) and (orienation: landscape) {
+  .emotion-0 {
+    display: none;
+  }
+}
+
+<Show
+  breakpoints={
+    Array [
+      "invalid",
+    ]
+  }
+  orientation="portrait"
+>
+  <Styled(div)
+    breakpoints={
+      Object {
+        "lg": Object {
+          "max": undefined,
+          "min": "1000px",
+        },
+        "md": Object {
+          "max": "1000px",
+          "min": "500px",
+        },
+        "sm": Object {
+          "max": "500px",
+          "min": undefined,
+        },
+      }
+    }
+    shownBreakpoints={
+      Array [
+        "invalid",
+      ]
+    }
+    shownOrientation="portrait"
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Show>
+`;
+
+exports[`components Show adds shown style when breakpoints are {"sm":{"max":"500px"},"md":{"min":"500px","max":"1000px"},"lg":{"min":"1000px"}} and shown breakpoints are ["invalid"] and shown orientation is undefined 1`] = `
+@media all and (max-width: 500px),all and (min-width: 500px) and (max-width: 1000px),all and (min-width: 1000px) {
+  .emotion-0 {
+    display: none;
+  }
+}
+
+<Show
+  breakpoints={
+    Array [
+      "invalid",
+    ]
+  }
+>
+  <Styled(div)
+    breakpoints={
+      Object {
+        "lg": Object {
+          "max": undefined,
+          "min": "1000px",
+        },
+        "md": Object {
+          "max": "1000px",
+          "min": "500px",
+        },
+        "sm": Object {
+          "max": "500px",
+          "min": undefined,
+        },
+      }
+    }
+    shownBreakpoints={
+      Array [
+        "invalid",
+      ]
+    }
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Show>
+`;
+
+exports[`components Show adds shown style when breakpoints are {"sm":{"max":"500px"},"md":{"min":"500px","max":"1000px"},"lg":{"min":"1000px"}} and shown breakpoints are ["lg"] and shown orientation is landscape 1`] = `
+@media all and (max-width: 500px) and (orienation: portrait),all and (min-width: 500px) and (max-width: 1000px) and (orienation: portrait) {
+  .emotion-0 {
+    display: none;
+  }
+}
+
+<Show
+  breakpoints={
+    Array [
+      "lg",
+    ]
+  }
+  orientation="landscape"
+>
+  <Styled(div)
+    breakpoints={
+      Object {
+        "lg": Object {
+          "max": undefined,
+          "min": "1000px",
+        },
+        "md": Object {
+          "max": "1000px",
+          "min": "500px",
+        },
+        "sm": Object {
+          "max": "500px",
+          "min": undefined,
+        },
+      }
+    }
+    shownBreakpoints={
+      Array [
+        "lg",
+      ]
+    }
+    shownOrientation="landscape"
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Show>
+`;
+
+exports[`components Show adds shown style when breakpoints are {"sm":{"max":"500px"},"md":{"min":"500px","max":"1000px"},"lg":{"min":"1000px"}} and shown breakpoints are ["lg"] and shown orientation is portrait 1`] = `
+@media all and (max-width: 500px) and (orienation: landscape),all and (min-width: 500px) and (max-width: 1000px) and (orienation: landscape) {
+  .emotion-0 {
+    display: none;
+  }
+}
+
+<Show
+  breakpoints={
+    Array [
+      "lg",
+    ]
+  }
+  orientation="portrait"
+>
+  <Styled(div)
+    breakpoints={
+      Object {
+        "lg": Object {
+          "max": undefined,
+          "min": "1000px",
+        },
+        "md": Object {
+          "max": "1000px",
+          "min": "500px",
+        },
+        "sm": Object {
+          "max": "500px",
+          "min": undefined,
+        },
+      }
+    }
+    shownBreakpoints={
+      Array [
+        "lg",
+      ]
+    }
+    shownOrientation="portrait"
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Show>
+`;
+
+exports[`components Show adds shown style when breakpoints are {"sm":{"max":"500px"},"md":{"min":"500px","max":"1000px"},"lg":{"min":"1000px"}} and shown breakpoints are ["lg"] and shown orientation is undefined 1`] = `
+@media all and (max-width: 500px),all and (min-width: 500px) and (max-width: 1000px) {
+  .emotion-0 {
+    display: none;
+  }
+}
+
+<Show
+  breakpoints={
+    Array [
+      "lg",
+    ]
+  }
+>
+  <Styled(div)
+    breakpoints={
+      Object {
+        "lg": Object {
+          "max": undefined,
+          "min": "1000px",
+        },
+        "md": Object {
+          "max": "1000px",
+          "min": "500px",
+        },
+        "sm": Object {
+          "max": "500px",
+          "min": undefined,
+        },
+      }
+    }
+    shownBreakpoints={
+      Array [
+        "lg",
+      ]
+    }
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Show>
+`;
+
+exports[`components Show adds shown style when breakpoints are {"sm":{"max":"500px"},"md":{"min":"500px","max":"1000px"},"lg":{"min":"1000px"}} and shown breakpoints are ["md", "lg"] and shown orientation is landscape 1`] = `
+@media all and (max-width: 500px) and (orienation: portrait) {
+  .emotion-0 {
+    display: none;
+  }
+}
+
+<Show
+  breakpoints={
+    Array [
+      "md",
+      "lg",
+    ]
+  }
+  orientation="landscape"
+>
+  <Styled(div)
+    breakpoints={
+      Object {
+        "lg": Object {
+          "max": undefined,
+          "min": "1000px",
+        },
+        "md": Object {
+          "max": "1000px",
+          "min": "500px",
+        },
+        "sm": Object {
+          "max": "500px",
+          "min": undefined,
+        },
+      }
+    }
+    shownBreakpoints={
+      Array [
+        "md",
+        "lg",
+      ]
+    }
+    shownOrientation="landscape"
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Show>
+`;
+
+exports[`components Show adds shown style when breakpoints are {"sm":{"max":"500px"},"md":{"min":"500px","max":"1000px"},"lg":{"min":"1000px"}} and shown breakpoints are ["md", "lg"] and shown orientation is portrait 1`] = `
+@media all and (max-width: 500px) and (orienation: landscape) {
+  .emotion-0 {
+    display: none;
+  }
+}
+
+<Show
+  breakpoints={
+    Array [
+      "md",
+      "lg",
+    ]
+  }
+  orientation="portrait"
+>
+  <Styled(div)
+    breakpoints={
+      Object {
+        "lg": Object {
+          "max": undefined,
+          "min": "1000px",
+        },
+        "md": Object {
+          "max": "1000px",
+          "min": "500px",
+        },
+        "sm": Object {
+          "max": "500px",
+          "min": undefined,
+        },
+      }
+    }
+    shownBreakpoints={
+      Array [
+        "md",
+        "lg",
+      ]
+    }
+    shownOrientation="portrait"
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Show>
+`;
+
+exports[`components Show adds shown style when breakpoints are {"sm":{"max":"500px"},"md":{"min":"500px","max":"1000px"},"lg":{"min":"1000px"}} and shown breakpoints are ["md", "lg"] and shown orientation is undefined 1`] = `
+@media all and (max-width: 500px) {
+  .emotion-0 {
+    display: none;
+  }
+}
+
+<Show
+  breakpoints={
+    Array [
+      "md",
+      "lg",
+    ]
+  }
+>
+  <Styled(div)
+    breakpoints={
+      Object {
+        "lg": Object {
+          "max": undefined,
+          "min": "1000px",
+        },
+        "md": Object {
+          "max": "1000px",
+          "min": "500px",
+        },
+        "sm": Object {
+          "max": "500px",
+          "min": undefined,
+        },
+      }
+    }
+    shownBreakpoints={
+      Array [
+        "md",
+        "lg",
+      ]
+    }
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Show>
+`;
+
+exports[`components Show adds shown style when breakpoints are {"sm":{"max":"500px"},"md":{"min":"500px","max":"1000px"},"lg":{"min":"1000px"}} and shown breakpoints are ["md"] and shown orientation is landscape 1`] = `
+@media all and (max-width: 500px) and (orienation: portrait),all and (min-width: 1000px) and (orienation: portrait) {
+  .emotion-0 {
+    display: none;
+  }
+}
+
+<Show
+  breakpoints={
+    Array [
+      "md",
+    ]
+  }
+  orientation="landscape"
+>
+  <Styled(div)
+    breakpoints={
+      Object {
+        "lg": Object {
+          "max": undefined,
+          "min": "1000px",
+        },
+        "md": Object {
+          "max": "1000px",
+          "min": "500px",
+        },
+        "sm": Object {
+          "max": "500px",
+          "min": undefined,
+        },
+      }
+    }
+    shownBreakpoints={
+      Array [
+        "md",
+      ]
+    }
+    shownOrientation="landscape"
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Show>
+`;
+
+exports[`components Show adds shown style when breakpoints are {"sm":{"max":"500px"},"md":{"min":"500px","max":"1000px"},"lg":{"min":"1000px"}} and shown breakpoints are ["md"] and shown orientation is portrait 1`] = `
+@media all and (max-width: 500px) and (orienation: landscape),all and (min-width: 1000px) and (orienation: landscape) {
+  .emotion-0 {
+    display: none;
+  }
+}
+
+<Show
+  breakpoints={
+    Array [
+      "md",
+    ]
+  }
+  orientation="portrait"
+>
+  <Styled(div)
+    breakpoints={
+      Object {
+        "lg": Object {
+          "max": undefined,
+          "min": "1000px",
+        },
+        "md": Object {
+          "max": "1000px",
+          "min": "500px",
+        },
+        "sm": Object {
+          "max": "500px",
+          "min": undefined,
+        },
+      }
+    }
+    shownBreakpoints={
+      Array [
+        "md",
+      ]
+    }
+    shownOrientation="portrait"
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Show>
+`;
+
+exports[`components Show adds shown style when breakpoints are {"sm":{"max":"500px"},"md":{"min":"500px","max":"1000px"},"lg":{"min":"1000px"}} and shown breakpoints are ["md"] and shown orientation is undefined 1`] = `
+@media all and (max-width: 500px),all and (min-width: 1000px) {
+  .emotion-0 {
+    display: none;
+  }
+}
+
+<Show
+  breakpoints={
+    Array [
+      "md",
+    ]
+  }
+>
+  <Styled(div)
+    breakpoints={
+      Object {
+        "lg": Object {
+          "max": undefined,
+          "min": "1000px",
+        },
+        "md": Object {
+          "max": "1000px",
+          "min": "500px",
+        },
+        "sm": Object {
+          "max": "500px",
+          "min": undefined,
+        },
+      }
+    }
+    shownBreakpoints={
+      Array [
+        "md",
+      ]
+    }
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Show>
+`;
+
+exports[`components Show adds shown style when breakpoints are {"sm":{"max":"500px"},"md":{"min":"500px","max":"1000px"},"lg":{"min":"1000px"}} and shown breakpoints are ["sm", "md", "lg"] and shown orientation is landscape 1`] = `
+@media all and (orienation: portrait) {
+  .emotion-0 {
+    display: none;
+  }
+}
+
+<Show
+  breakpoints={
+    Array [
+      "sm",
+      "md",
+      "lg",
+    ]
+  }
+  orientation="landscape"
+>
+  <Styled(div)
+    breakpoints={
+      Object {
+        "lg": Object {
+          "max": undefined,
+          "min": "1000px",
+        },
+        "md": Object {
+          "max": "1000px",
+          "min": "500px",
+        },
+        "sm": Object {
+          "max": "500px",
+          "min": undefined,
+        },
+      }
+    }
+    shownBreakpoints={
+      Array [
+        "sm",
+        "md",
+        "lg",
+      ]
+    }
+    shownOrientation="landscape"
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Show>
+`;
+
+exports[`components Show adds shown style when breakpoints are {"sm":{"max":"500px"},"md":{"min":"500px","max":"1000px"},"lg":{"min":"1000px"}} and shown breakpoints are ["sm", "md", "lg"] and shown orientation is portrait 1`] = `
+@media all and (orienation: landscape) {
+  .emotion-0 {
+    display: none;
+  }
+}
+
+<Show
+  breakpoints={
+    Array [
+      "sm",
+      "md",
+      "lg",
+    ]
+  }
+  orientation="portrait"
+>
+  <Styled(div)
+    breakpoints={
+      Object {
+        "lg": Object {
+          "max": undefined,
+          "min": "1000px",
+        },
+        "md": Object {
+          "max": "1000px",
+          "min": "500px",
+        },
+        "sm": Object {
+          "max": "500px",
+          "min": undefined,
+        },
+      }
+    }
+    shownBreakpoints={
+      Array [
+        "sm",
+        "md",
+        "lg",
+      ]
+    }
+    shownOrientation="portrait"
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Show>
+`;
+
+exports[`components Show adds shown style when breakpoints are {"sm":{"max":"500px"},"md":{"min":"500px","max":"1000px"},"lg":{"min":"1000px"}} and shown breakpoints are ["sm", "md", "lg"] and shown orientation is undefined 1`] = `
+@media {
+  .emotion-0 {
+    display: none;
+  }
+}
+
+<Show
+  breakpoints={
+    Array [
+      "sm",
+      "md",
+      "lg",
+    ]
+  }
+>
+  <Styled(div)
+    breakpoints={
+      Object {
+        "lg": Object {
+          "max": undefined,
+          "min": "1000px",
+        },
+        "md": Object {
+          "max": "1000px",
+          "min": "500px",
+        },
+        "sm": Object {
+          "max": "500px",
+          "min": undefined,
+        },
+      }
+    }
+    shownBreakpoints={
+      Array [
+        "sm",
+        "md",
+        "lg",
+      ]
+    }
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Show>
+`;
+
+exports[`components Show adds shown style when breakpoints are {"sm":{"max":"500px"},"md":{"min":"500px","max":"1000px"},"lg":{"min":"1000px"}} and shown breakpoints are ["sm", "md"] and shown orientation is landscape 1`] = `
+@media all and (min-width: 1000px) and (orienation: portrait) {
+  .emotion-0 {
+    display: none;
+  }
+}
+
+<Show
+  breakpoints={
+    Array [
+      "sm",
+      "md",
+    ]
+  }
+  orientation="landscape"
+>
+  <Styled(div)
+    breakpoints={
+      Object {
+        "lg": Object {
+          "max": undefined,
+          "min": "1000px",
+        },
+        "md": Object {
+          "max": "1000px",
+          "min": "500px",
+        },
+        "sm": Object {
+          "max": "500px",
+          "min": undefined,
+        },
+      }
+    }
+    shownBreakpoints={
+      Array [
+        "sm",
+        "md",
+      ]
+    }
+    shownOrientation="landscape"
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Show>
+`;
+
+exports[`components Show adds shown style when breakpoints are {"sm":{"max":"500px"},"md":{"min":"500px","max":"1000px"},"lg":{"min":"1000px"}} and shown breakpoints are ["sm", "md"] and shown orientation is portrait 1`] = `
+@media all and (min-width: 1000px) and (orienation: landscape) {
+  .emotion-0 {
+    display: none;
+  }
+}
+
+<Show
+  breakpoints={
+    Array [
+      "sm",
+      "md",
+    ]
+  }
+  orientation="portrait"
+>
+  <Styled(div)
+    breakpoints={
+      Object {
+        "lg": Object {
+          "max": undefined,
+          "min": "1000px",
+        },
+        "md": Object {
+          "max": "1000px",
+          "min": "500px",
+        },
+        "sm": Object {
+          "max": "500px",
+          "min": undefined,
+        },
+      }
+    }
+    shownBreakpoints={
+      Array [
+        "sm",
+        "md",
+      ]
+    }
+    shownOrientation="portrait"
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Show>
+`;
+
+exports[`components Show adds shown style when breakpoints are {"sm":{"max":"500px"},"md":{"min":"500px","max":"1000px"},"lg":{"min":"1000px"}} and shown breakpoints are ["sm", "md"] and shown orientation is undefined 1`] = `
+@media all and (min-width: 1000px) {
+  .emotion-0 {
+    display: none;
+  }
+}
+
+<Show
+  breakpoints={
+    Array [
+      "sm",
+      "md",
+    ]
+  }
+>
+  <Styled(div)
+    breakpoints={
+      Object {
+        "lg": Object {
+          "max": undefined,
+          "min": "1000px",
+        },
+        "md": Object {
+          "max": "1000px",
+          "min": "500px",
+        },
+        "sm": Object {
+          "max": "500px",
+          "min": undefined,
+        },
+      }
+    }
+    shownBreakpoints={
+      Array [
+        "sm",
+        "md",
+      ]
+    }
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Show>
+`;
+
+exports[`components Show adds shown style when breakpoints are {"sm":{"max":"500px"},"md":{"min":"500px","max":"1000px"},"lg":{"min":"1000px"}} and shown breakpoints are ["sm"] and shown orientation is landscape 1`] = `
+@media all and (min-width: 500px) and (max-width: 1000px) and (orienation: portrait),all and (min-width: 1000px) and (orienation: portrait) {
+  .emotion-0 {
+    display: none;
+  }
+}
+
+<Show
+  breakpoints={
+    Array [
+      "sm",
+    ]
+  }
+  orientation="landscape"
+>
+  <Styled(div)
+    breakpoints={
+      Object {
+        "lg": Object {
+          "max": undefined,
+          "min": "1000px",
+        },
+        "md": Object {
+          "max": "1000px",
+          "min": "500px",
+        },
+        "sm": Object {
+          "max": "500px",
+          "min": undefined,
+        },
+      }
+    }
+    shownBreakpoints={
+      Array [
+        "sm",
+      ]
+    }
+    shownOrientation="landscape"
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Show>
+`;
+
+exports[`components Show adds shown style when breakpoints are {"sm":{"max":"500px"},"md":{"min":"500px","max":"1000px"},"lg":{"min":"1000px"}} and shown breakpoints are ["sm"] and shown orientation is portrait 1`] = `
+@media all and (min-width: 500px) and (max-width: 1000px) and (orienation: landscape),all and (min-width: 1000px) and (orienation: landscape) {
+  .emotion-0 {
+    display: none;
+  }
+}
+
+<Show
+  breakpoints={
+    Array [
+      "sm",
+    ]
+  }
+  orientation="portrait"
+>
+  <Styled(div)
+    breakpoints={
+      Object {
+        "lg": Object {
+          "max": undefined,
+          "min": "1000px",
+        },
+        "md": Object {
+          "max": "1000px",
+          "min": "500px",
+        },
+        "sm": Object {
+          "max": "500px",
+          "min": undefined,
+        },
+      }
+    }
+    shownBreakpoints={
+      Array [
+        "sm",
+      ]
+    }
+    shownOrientation="portrait"
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Show>
+`;
+
+exports[`components Show adds shown style when breakpoints are {"sm":{"max":"500px"},"md":{"min":"500px","max":"1000px"},"lg":{"min":"1000px"}} and shown breakpoints are ["sm"] and shown orientation is undefined 1`] = `
+@media all and (min-width: 500px) and (max-width: 1000px),all and (min-width: 1000px) {
+  .emotion-0 {
+    display: none;
+  }
+}
+
+<Show
+  breakpoints={
+    Array [
+      "sm",
+    ]
+  }
+>
+  <Styled(div)
+    breakpoints={
+      Object {
+        "lg": Object {
+          "max": undefined,
+          "min": "1000px",
+        },
+        "md": Object {
+          "max": "1000px",
+          "min": "500px",
+        },
+        "sm": Object {
+          "max": "500px",
+          "min": undefined,
+        },
+      }
+    }
+    shownBreakpoints={
+      Array [
+        "sm",
+      ]
+    }
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Show>
+`;
+
+exports[`components Show adds shown style when breakpoints are {"sm":{"max":"500px"},"md":{"min":"500px","max":"1000px"},"lg":{"min":"1000px"}} and shown breakpoints are [] and shown orientation is landscape 1`] = `
+@media all and (max-width: 500px) and (orienation: portrait),all and (min-width: 500px) and (max-width: 1000px) and (orienation: portrait),all and (min-width: 1000px) and (orienation: portrait) {
+  .emotion-0 {
+    display: none;
+  }
+}
+
+<Show
+  breakpoints={Array []}
+  orientation="landscape"
+>
+  <Styled(div)
+    breakpoints={
+      Object {
+        "lg": Object {
+          "max": undefined,
+          "min": "1000px",
+        },
+        "md": Object {
+          "max": "1000px",
+          "min": "500px",
+        },
+        "sm": Object {
+          "max": "500px",
+          "min": undefined,
+        },
+      }
+    }
+    shownBreakpoints={Array []}
+    shownOrientation="landscape"
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Show>
+`;
+
+exports[`components Show adds shown style when breakpoints are {"sm":{"max":"500px"},"md":{"min":"500px","max":"1000px"},"lg":{"min":"1000px"}} and shown breakpoints are [] and shown orientation is portrait 1`] = `
+@media all and (max-width: 500px) and (orienation: landscape),all and (min-width: 500px) and (max-width: 1000px) and (orienation: landscape),all and (min-width: 1000px) and (orienation: landscape) {
+  .emotion-0 {
+    display: none;
+  }
+}
+
+<Show
+  breakpoints={Array []}
+  orientation="portrait"
+>
+  <Styled(div)
+    breakpoints={
+      Object {
+        "lg": Object {
+          "max": undefined,
+          "min": "1000px",
+        },
+        "md": Object {
+          "max": "1000px",
+          "min": "500px",
+        },
+        "sm": Object {
+          "max": "500px",
+          "min": undefined,
+        },
+      }
+    }
+    shownBreakpoints={Array []}
+    shownOrientation="portrait"
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Show>
+`;
+
+exports[`components Show adds shown style when breakpoints are {"sm":{"max":"500px"},"md":{"min":"500px","max":"1000px"},"lg":{"min":"1000px"}} and shown breakpoints are [] and shown orientation is undefined 1`] = `
+@media all and (max-width: 500px),all and (min-width: 500px) and (max-width: 1000px),all and (min-width: 1000px) {
+  .emotion-0 {
+    display: none;
+  }
+}
+
+<Show
+  breakpoints={Array []}
+>
+  <Styled(div)
+    breakpoints={
+      Object {
+        "lg": Object {
+          "max": undefined,
+          "min": "1000px",
+        },
+        "md": Object {
+          "max": "1000px",
+          "min": "500px",
+        },
+        "sm": Object {
+          "max": "500px",
+          "min": undefined,
+        },
+      }
+    }
+    shownBreakpoints={Array []}
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Show>
+`;
+
+exports[`components Show adds shown style when breakpoints are {"sm":{"max":"500px"},"md":{"min":"500px","max":"1000px"},"lg":{"min":"1000px"}} and shown breakpoints are undefined and shown orientation is landscape 1`] = `
+@media all and (max-width: 500px) and (orienation: portrait),all and (min-width: 500px) and (max-width: 1000px) and (orienation: portrait),all and (min-width: 1000px) and (orienation: portrait) {
+  .emotion-0 {
+    display: none;
+  }
+}
+
+<Show
+  orientation="landscape"
+>
+  <Styled(div)
+    breakpoints={
+      Object {
+        "lg": Object {
+          "max": undefined,
+          "min": "1000px",
+        },
+        "md": Object {
+          "max": "1000px",
+          "min": "500px",
+        },
+        "sm": Object {
+          "max": "500px",
+          "min": undefined,
+        },
+      }
+    }
+    shownBreakpoints={Array []}
+    shownOrientation="landscape"
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Show>
+`;
+
+exports[`components Show adds shown style when breakpoints are {"sm":{"max":"500px"},"md":{"min":"500px","max":"1000px"},"lg":{"min":"1000px"}} and shown breakpoints are undefined and shown orientation is portrait 1`] = `
+@media all and (max-width: 500px) and (orienation: landscape),all and (min-width: 500px) and (max-width: 1000px) and (orienation: landscape),all and (min-width: 1000px) and (orienation: landscape) {
+  .emotion-0 {
+    display: none;
+  }
+}
+
+<Show
+  orientation="portrait"
+>
+  <Styled(div)
+    breakpoints={
+      Object {
+        "lg": Object {
+          "max": undefined,
+          "min": "1000px",
+        },
+        "md": Object {
+          "max": "1000px",
+          "min": "500px",
+        },
+        "sm": Object {
+          "max": "500px",
+          "min": undefined,
+        },
+      }
+    }
+    shownBreakpoints={Array []}
+    shownOrientation="portrait"
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Show>
+`;
+
+exports[`components Show adds shown style when breakpoints are {"sm":{"max":"500px"},"md":{"min":"500px","max":"1000px"},"lg":{"min":"1000px"}} and shown breakpoints are undefined and shown orientation is undefined 1`] = `
+@media all and (max-width: 500px),all and (min-width: 500px) and (max-width: 1000px),all and (min-width: 1000px) {
+  .emotion-0 {
+    display: none;
+  }
+}
+
+<Show>
+  <Styled(div)
+    breakpoints={
+      Object {
+        "lg": Object {
+          "max": undefined,
+          "min": "1000px",
+        },
+        "md": Object {
+          "max": "1000px",
+          "min": "500px",
+        },
+        "sm": Object {
+          "max": "500px",
+          "min": undefined,
+        },
+      }
+    }
+    shownBreakpoints={Array []}
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Show>
+`;
+
+exports[`components Show does NOT show content when shown devices are ["desktop"] and current devices are ["mobile", "android"] 1`] = `
+<Show
+  devices={
+    Array [
+      "desktop",
+    ]
+  }
+/>
+`;
+
+exports[`components Show does NOT show content when shown devices are ["desktop"] and current devices are ["mobile"] 1`] = `
+<Show
+  devices={
+    Array [
+      "desktop",
+    ]
+  }
+/>
+`;
+
+exports[`components Show does NOT show content when shown devices are ["desktop"] and current devices are ["tablet"] 1`] = `
+<Show
+  devices={
+    Array [
+      "desktop",
+    ]
+  }
+/>
+`;
+
+exports[`components Show does NOT show content when shown devices are ["desktop"] and current devices are ["unknown"] 1`] = `
+<Show
+  devices={
+    Array [
+      "desktop",
+    ]
+  }
+/>
+`;
+
+exports[`components Show does NOT show content when shown devices are ["ios"] and current devices are ["desktop"] 1`] = `
+<Show
+  devices={
+    Array [
+      "ios",
+    ]
+  }
+/>
+`;
+
+exports[`components Show does NOT show content when shown devices are ["ios"] and current devices are ["mobile"] 1`] = `
+<Show
+  devices={
+    Array [
+      "ios",
+    ]
+  }
+/>
+`;
+
+exports[`components Show does NOT show content when shown devices are ["ios"] and current devices are ["tablet"] 1`] = `
+<Show
+  devices={
+    Array [
+      "ios",
+    ]
+  }
+/>
+`;
+
+exports[`components Show does NOT show content when shown devices are ["ios"] and current devices are ["unknown"] 1`] = `
+<Show
+  devices={
+    Array [
+      "ios",
+    ]
+  }
+/>
+`;
+
+exports[`components Show does NOT show content when shown devices are ["mobile"] and current devices are ["desktop"] 1`] = `
+<Show
+  devices={
+    Array [
+      "mobile",
+    ]
+  }
+/>
+`;
+
+exports[`components Show does NOT show content when shown devices are ["mobile"] and current devices are ["tablet", "ipad"] 1`] = `
+<Show
+  devices={
+    Array [
+      "mobile",
+    ]
+  }
+/>
+`;
+
+exports[`components Show does NOT show content when shown devices are ["mobile"] and current devices are ["tablet"] 1`] = `
+<Show
+  devices={
+    Array [
+      "mobile",
+    ]
+  }
+/>
+`;
+
+exports[`components Show does NOT show content when shown devices are ["mobile"] and current devices are ["unknown"] 1`] = `
+<Show
+  devices={
+    Array [
+      "mobile",
+    ]
+  }
+/>
+`;
+
+exports[`components Show does NOT show content when shown devices are ["tablet"] and current devices are ["desktop"] 1`] = `
+<Show
+  devices={
+    Array [
+      "tablet",
+    ]
+  }
+/>
+`;
+
+exports[`components Show does NOT show content when shown devices are ["tablet"] and current devices are ["mobile", "android"] 1`] = `
+<Show
+  devices={
+    Array [
+      "tablet",
+    ]
+  }
+/>
+`;
+
+exports[`components Show does NOT show content when shown devices are ["tablet"] and current devices are ["mobile"] 1`] = `
+<Show
+  devices={
+    Array [
+      "tablet",
+    ]
+  }
+/>
+`;
+
+exports[`components Show does NOT show content when shown devices are ["tablet"] and current devices are ["unknown"] 1`] = `
+<Show
+  devices={
+    Array [
+      "tablet",
+    ]
+  }
+/>
+`;
+
+exports[`components Show does NOT show content when shown devices are ["unknown"] and current devices are ["desktop"] 1`] = `
+<Show
+  devices={
+    Array [
+      "unknown",
+    ]
+  }
+/>
+`;
+
+exports[`components Show does NOT show content when shown devices are ["unknown"] and current devices are ["mobile"] 1`] = `
+<Show
+  devices={
+    Array [
+      "unknown",
+    ]
+  }
+/>
+`;
+
+exports[`components Show does NOT show content when shown devices are ["unknown"] and current devices are ["tablet"] 1`] = `
+<Show
+  devices={
+    Array [
+      "unknown",
+    ]
+  }
+/>
+`;
+
+exports[`components Show does NOT show content when shown devices are [] and current devices are ["desktop"] 1`] = `
+<Show
+  devices={Array []}
+/>
+`;
+
+exports[`components Show does NOT show content when shown devices are [] and current devices are ["mobile"] 1`] = `
+<Show
+  devices={Array []}
+/>
+`;
+
+exports[`components Show does NOT show content when shown devices are [] and current devices are ["tablet"] 1`] = `
+<Show
+  devices={Array []}
+/>
+`;
+
+exports[`components Show does NOT show content when shown devices are [] and current devices are ["unknown"] 1`] = `
+<Show
+  devices={Array []}
+/>
+`;
+
+exports[`components Show shows content when shown devices are ["android"] and current devices are ["mobile", "android"] 1`] = `
+@media {
+  .emotion-0 {
+    display: none;
+  }
+}
+
+<Show
+  devices={
+    Array [
+      "android",
+    ]
+  }
+>
+  <Styled(div)
+    breakpoints={Object {}}
+    shownBreakpoints={Array []}
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Show>
+`;
+
+exports[`components Show shows content when shown devices are ["desktop"] and current devices are ["desktop"] 1`] = `
+@media {
+  .emotion-0 {
+    display: none;
+  }
+}
+
+<Show
+  devices={
+    Array [
+      "desktop",
+    ]
+  }
+>
+  <Styled(div)
+    breakpoints={Object {}}
+    shownBreakpoints={Array []}
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Show>
+`;
+
+exports[`components Show shows content when shown devices are ["mobile", "android", "ios"] and current devices are ["mobile", "android"] 1`] = `
+@media {
+  .emotion-0 {
+    display: none;
+  }
+}
+
+<Show
+  devices={
+    Array [
+      "mobile",
+      "android",
+      "ios",
+    ]
+  }
+>
+  <Styled(div)
+    breakpoints={Object {}}
+    shownBreakpoints={Array []}
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Show>
+`;
+
+exports[`components Show shows content when shown devices are ["mobile", "android"] and current devices are ["mobile", "android"] 1`] = `
+@media {
+  .emotion-0 {
+    display: none;
+  }
+}
+
+<Show
+  devices={
+    Array [
+      "mobile",
+      "android",
+    ]
+  }
+>
+  <Styled(div)
+    breakpoints={Object {}}
+    shownBreakpoints={Array []}
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Show>
+`;
+
+exports[`components Show shows content when shown devices are ["mobile"] and current devices are ["mobile", "android"] 1`] = `
+@media {
+  .emotion-0 {
+    display: none;
+  }
+}
+
+<Show
+  devices={
+    Array [
+      "mobile",
+    ]
+  }
+>
+  <Styled(div)
+    breakpoints={Object {}}
+    shownBreakpoints={Array []}
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Show>
+`;
+
+exports[`components Show shows content when shown devices are ["mobile"] and current devices are ["mobile"] 1`] = `
+@media {
+  .emotion-0 {
+    display: none;
+  }
+}
+
+<Show
+  devices={
+    Array [
+      "mobile",
+    ]
+  }
+>
+  <Styled(div)
+    breakpoints={Object {}}
+    shownBreakpoints={Array []}
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Show>
+`;
+
+exports[`components Show shows content when shown devices are ["tablet"] and current devices are ["tablet"] 1`] = `
+@media {
+  .emotion-0 {
+    display: none;
+  }
+}
+
+<Show
+  devices={
+    Array [
+      "tablet",
+    ]
+  }
+>
+  <Styled(div)
+    breakpoints={Object {}}
+    shownBreakpoints={Array []}
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Show>
+`;
+
+exports[`components Show shows content when shown devices are ["unknown"] and current devices are ["unknown"] 1`] = `
+@media {
+  .emotion-0 {
+    display: none;
+  }
+}
+
+<Show
+  devices={
+    Array [
+      "unknown",
+    ]
+  }
+>
+  <Styled(div)
+    breakpoints={Object {}}
+    shownBreakpoints={Array []}
+  >
+    <div
+      className="emotion-0"
+    >
+      <p>
+        content
+      </p>
+    </div>
+  </Styled(div)>
+</Show>
+`;

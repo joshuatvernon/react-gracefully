@@ -1,17 +1,12 @@
 import React, { FunctionComponent } from 'react';
 
 import { configSelectors, globalSelectors, useConfigStore, useGlobalStore } from '../../stores';
-import { isEmpty } from '../../utils';
+import { isEmpty, isNil } from '../../utils';
 import { StyledMedia } from './styles';
 import { ShowProps } from './types';
 
 export const Show: FunctionComponent<ShowProps> = (props) => {
-  const {
-    devices: shownDevices = [],
-    breakpoints: shownBreakpoints = [],
-    orientation: shownOrientation,
-    children
-  } = props;
+  const { devices: shownDevices, breakpoints: shownBreakpoints = [], orientation: shownOrientation, children } = props;
 
   const [configState] = useConfigStore();
   const [globalState] = useGlobalStore();
@@ -21,7 +16,10 @@ export const Show: FunctionComponent<ShowProps> = (props) => {
 
   const devicesState = getDevicesState(globalState);
 
-  if (!isEmpty(shownDevices) && isEmpty(shownDevices.filter((shownDevice) => devicesState[shownDevice]))) {
+  if (
+    (!isNil(shownDevices) && isEmpty(shownDevices)) ||
+    (!isNil(shownDevices) && isEmpty(shownDevices.filter((shownDevice) => devicesState[shownDevice])))
+  ) {
     return null;
   }
 
