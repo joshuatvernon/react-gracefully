@@ -9,7 +9,7 @@ export const StyledMedia = styled.div`
   ${(props: ShowStyleProps) => {
     const { breakpoints, shownBreakpoints, shownOrientation } = props;
 
-    const hiddenBreakpoints = keys(breakpoints).filter((breakpoint) => shownBreakpoints.includes(breakpoint));
+    const hiddenBreakpoints = keys(breakpoints).filter((breakpoint) => !shownBreakpoints.includes(breakpoint));
 
     const hiddenOrientation = !isNil(shownOrientation)
       ? shownOrientation === Orientation.Landscape
@@ -19,9 +19,6 @@ export const StyledMedia = styled.div`
 
     const mediaRules = hiddenBreakpoints
       .map((breakpoint: string) => {
-        if (isNil(breakpoints[breakpoint])) {
-          return undefined;
-        }
         const { min, max } = breakpoints[breakpoint];
         let query = 'all';
         if (min) {
