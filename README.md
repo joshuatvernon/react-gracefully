@@ -7,8 +7,8 @@
 <p align="center">
   <a href="https://www.npmjs.com/package/react-gracefully"><img src="https://img.shields.io/npm/v/react-gracefully.svg"></a>
   <a href="https://travis-ci.com/joshuatvernon/react-gracefully"><img src="https://travis-ci.com/joshuatvernon/react-gracefully.svg?branch=main"></a>
-  <a href="https://snyk.io/test/github/joshuatvernon/react-gracefully"><img src="https://snyk.io/test/github/joshuatvernon/react-gracefully/badge.svg" /><a/>
   <a href="https://codecov.io/gh/joshuatvernon/react-gracefully"><img src="https://codecov.io/gh/joshuatvernon/react-gracefully/branch/main/graph/badge.svg" /></a>
+  <a href="https://snyk.io/test/github/joshuatvernon/react-gracefully"><img src="https://snyk.io/test/github/joshuatvernon/react-gracefully/badge.svg" /><a/>
   <a href="https://bundlephobia.com/result?p=react-gracefully"><img src="https://img.shields.io/bundlephobia/minzip/react-gracefully.svg" /></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg"></a>
 </p>
