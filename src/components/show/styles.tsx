@@ -1,6 +1,5 @@
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
-import isEqual from 'lodash.isequal';
 
 import { Orientation } from '../../stores';
 import { isEmpty, isNil, keys } from '../../utils';
@@ -13,7 +12,7 @@ export const StyledMedia = styled.div`
     const hiddenBreakpoints = keys(breakpoints).filter((breakpoint) => shownBreakpoints.includes(breakpoint));
 
     const hiddenOrientation = !isNil(shownOrientation)
-      ? isEqual(shownOrientation, Orientation.Landscape)
+      ? shownOrientation === Orientation.Landscape
         ? Orientation.Portait
         : Orientation.Landscape
       : undefined;

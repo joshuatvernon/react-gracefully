@@ -1,5 +1,4 @@
 import React, { FunctionComponent } from 'react';
-import isEqual from 'lodash.isequal';
 import merge from 'lodash.merge';
 
 import { UNKNOWN_DEVICE_TYPE } from '../../constants';
@@ -35,7 +34,7 @@ export const GraceProvider: FunctionComponent<GraceProviderProps> = (props) => {
   }
 
   const deviceIsUnknown = !devices
-    .filter((device: string) => !isEqual(device, UNKNOWN_DEVICE_TYPE))
+    .filter((device: string) => device !== UNKNOWN_DEVICE_TYPE)
     .map((device: string) => devicesState[device])
     .some((isDevice: boolean) => isDevice);
   if (deviceIsUnknown) {
