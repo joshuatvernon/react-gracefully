@@ -30,7 +30,11 @@ export const GraceProvider: FunctionComponent<GraceProviderProps> = (props) => {
     devices = uniq(getDevices(initialConfigState).concat(keys(devicesState)));
   } else if (!isNil(devicesOrDevicesState)) {
     // `devicesOrDevicesState` is Device[]
+    devicesState = devicesOrDevicesState.reduce((prev, curr) => ({ ...prev, [curr]: false }), devicesState);
     devices = uniq(getDevices(initialConfigState).concat(devicesOrDevicesState));
+  } else {
+    // `devicesOrDevicesState` is undefined
+    devices = getDevices(initialConfigState);
   }
 
   const deviceIsUnknown = !devices
