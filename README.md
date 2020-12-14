@@ -44,7 +44,7 @@ Additionally, **react-gracefully** exposes the [useGrace](#usegrace-hook) React 
 
 ## Installation
 
-**react-gracefully** can be installed with NPM or Yarn.
+**react-gracefully** can be installed with [npm](https://www.npmjs.com/) or [yarn](https://classic.yarnpkg.com/en/).
 
 ```sh
 npm install --save react-gracefully
