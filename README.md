@@ -1,7 +1,7 @@
 
-<span align="center">
+<p align="center">
   <img src="https://user-images.githubusercontent.com/16813547/101833625-1bebd580-3aee-11eb-95b6-be06c2254207.png" alt="react-gracefully logo" height="150" />
-</span>
+</p>
 <div align="center">
   <h1 align="center">
     react-gracefully
@@ -30,7 +30,6 @@
 <pre align="center">npm install --save react-gracefully</pre>
 <p align="center">🦢</p>
 
-<hr>
 <hr>
 
 ## Overview
