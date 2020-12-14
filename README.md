@@ -26,12 +26,6 @@
     <img src="https://snyk.io/test/github/joshuatvernon/react-gracefully/badge.svg" />
     <a/>
 </p>
-<p align="center">
-  <img src="./badges/badge-branches.svg" />
-  <img src="./badges/badge-functions.svg" />
-  <img src="./badges/badge-lines.svg" />
-  <img src="./badges/badge-statements.svg" />
-</p>
 
 A library for gracefully rendering responsive React client or server side.
 
