@@ -15,7 +15,7 @@ export enum Orientation {
 export interface WindowState {
   width: string;
   height: string;
-  orientation: Orientation;
+  orientation: 'portrait' | 'landscape' | Orientation;
 }
 
 export interface GlobalState {

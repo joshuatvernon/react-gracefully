@@ -80,7 +80,8 @@ export const useGrace = (): UseGraceState => {
         window: {
           width: (units: string) => isWindowWidthEqual(globalState, units),
           height: (units: string) => isWindowHeightEqual(globalState, units),
-          orientation: (orientation: Orientation) => isWindowOrientationEqual(globalState, orientation),
+          orientation: (orientation: 'portrait' | 'landscape' | Orientation) =>
+            isWindowOrientationEqual(globalState, orientation),
           portrait: () => isWindowOrientationEqual(globalState, Orientation.Portait),
           landscape: () => isWindowOrientationEqual(globalState, Orientation.Landscape)
         }

@@ -28,8 +28,10 @@ export const isWindowHeightGreaterThan = (state: GlobalState, height: string): b
 
 export const getWindowOrientation = (state: GlobalState): Orientation => state.window.orientation;
 
-export const isWindowOrientationEqual = (state: GlobalState, orientation: Orientation): boolean =>
-  orientation === state.window.orientation;
+export const isWindowOrientationEqual = (
+  state: GlobalState,
+  orientation: 'portrait' | 'landscape' | Orientation
+): boolean => orientation === state.window.orientation;
 
 export const globalWindowSelectors = {
   getWindowState,
