@@ -1,6 +1,6 @@
 {
   "name": "react-gracefully",
-  "version": "0.3.3",
+  "version": "0.4.1",
   "description": "A utility for gracefully rendering responsive react code server side",
   "keywords": [
     "react",
@@ -78,7 +78,6 @@
     "cbf": "^2.3.2",
     "codecov": "^3.8.1",
     "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.5",
     "enzyme-to-json": "^3.6.1",
     "eslint": "^7.15.0",
     "eslint-config-prettier": "^7.0.0",

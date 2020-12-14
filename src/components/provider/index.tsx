@@ -1,13 +1,16 @@
 import React, { FunctionComponent } from 'react';
 
 import { UNKNOWN_DEVICE_TYPE } from '../../constants';
+import { useMediaQuery } from '../../hooks/use-media-query';
+import { useWindowSize } from '../../hooks/use-window-size';
 import {
   DevicesState,
   globalSelectors,
   GlobalState,
   GlobalStoreContainer,
   initialConfigState,
-  initialGlobalState
+  initialGlobalState,
+  WindowState
 } from '../../stores';
 import { configSelectors, ConfigState, ConfigStoreContainer, Device } from '../../stores/config';
 import { isNil, keys, uniq } from '../../utils';
@@ -51,10 +54,21 @@ export const GraceProvider: FunctionComponent<GraceProviderProps> = (props) => {
     devices
   };
 
-  // TODO: Add functionality to detect window "width", "height" and "orientation" and update
-  // window state when window state is NOT passed to provider
+  let windowState: WindowState = getWindowState(initialGlobalState);
+  if (!isNil(window)) {
+    windowState = window;
+  } else {
+    const { width, height } = useWindowSize();
+    const orientation = useMediaQuery('(orientation: portrait)') ? 'portrait' : 'landscape';
+    windowState = {
+      width,
+      height,
+      orientation
+    };
+  }
+
   const globalState: GlobalState = {
-    window: !isNil(window) ? window : getWindowState(initialGlobalState),
+    window: windowState,
     devices: devicesState
   };
 
