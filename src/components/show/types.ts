@@ -49,11 +49,11 @@ export interface ShowProps {
    * @description
    * Optional orienation that should be shown
    */
-  orientation?: Orientation;
+  orientation?: 'portrait' | 'landscape' | Orientation;
 }
 
 export interface ShowStyleProps {
   breakpoints: Breakpoints;
   shownBreakpoints: string[];
-  shownOrientation?: Orientation;
+  shownOrientation?: 'portrait' | 'landscape' | Orientation;
 }

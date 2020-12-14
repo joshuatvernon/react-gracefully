@@ -170,7 +170,7 @@ export interface UseGraceStateIsFunctions {
        *
        * @returns {boolean} isCurrentOrientation - whether or not the current orientation is equal to orientation.
        */
-      orientation: (orientation: Orientation) => boolean;
+      orientation: (orientation: 'portrait' | 'landscape' | Orientation) => boolean;
       /**
        * @example
        * const { is } = useGrace();
@@ -210,12 +210,13 @@ export interface UseGraceStateIsFunctions {
    * Gets device and returns:
    * - true: if device is the same
    * - false: if device is different
+   * - undefined: if device has not been provided
    *
    * @param {string} device - device to compare against current device.
    *
    * @returns {boolean} isDevice - whether or not the current device is equal to device.
    */
-  device: (device: string) => boolean;
+  device: (device: string) => undefined | boolean;
   /**
    * @example
    * const { is } = useGrace();

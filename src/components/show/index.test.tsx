@@ -13,7 +13,7 @@ describe('components', () => {
     currentBreakpoints?: Breakpoints;
     shownDevices?: Device[];
     shownBreakpoints?: string[];
-    shownOrientation?: Orientation;
+    shownOrientation?: 'portrait' | 'landscape' | Orientation;
   }) => {
     const {
       node,
