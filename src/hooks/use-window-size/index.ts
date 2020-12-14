@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { UseWindowSizeState } from './types';
 
 export const useWindowSize = (): UseWindowSizeState => {
+  /* istanbul ignore if */
   if (typeof window === 'undefined') {
     return {
       width: '1024px',

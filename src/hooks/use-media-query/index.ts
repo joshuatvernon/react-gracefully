@@ -1,6 +1,11 @@
 import { useEffect, useState } from 'react';
 
 export const useMediaQuery = (query: string): boolean => {
+  /* istanbul ignore if */
+  if (typeof window === 'undefined') {
+    return false;
+  }
+
   // Create queryMatches state to keep track of whether or not the query currently matches
   const [queryMatches, setQueryMatches] = useState(false);
 
