@@ -34,7 +34,11 @@
 
 ## Overview
 
-A library for gracefully rendering responsive React client or server side.
+A library for _responsively_ and _gracefully_ rendering client and server side React.
+
+**react-gracefully** exposes [Express Middleware](#express-middleware) and the [GraceProvider](#graceprovider-component) React provider component that allows _devices_, _breakpoints_ and _window_ to be configured client and server side.
+
+Additionally, **react-gracefully** exposes the [useGrace](#usegrace-hook) React hook and [Show](#show-component) and [Hide](#hide-component) React components to allow React code to be _responsively_ and _gracefully_ rendered client and server side.
 
 <hr>
 
@@ -50,7 +54,7 @@ npm install --save react-gracefully
 
 ### `useGrace` hook
 
-**react-gracefully** exposes the `useGrace` hook to get access to _devices_, _breakpoints_ and _window_ details.
+**react-gracefully** exposes the `useGrace` React hook to get access to _devices_, _breakpoints_ and _window_ details.
 
 #### Devices
 
