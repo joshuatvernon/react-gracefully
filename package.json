@@ -59,7 +59,6 @@
     "@emotion/react": "^11.1.2",
     "@emotion/styled": "^11.0.0",
     "express-useragent": "^1.0.15",
-    "lodash.merge": "^4.6.2",
     "react-sweet-state": "^2.4.4",
     "to-px": "^1.1.0"
   },
@@ -70,7 +69,6 @@
     "@types/express-useragent": "^1.0.0",
     "@types/jest": "^26.0.16",
     "@types/lodash.clonedeep": "^4.5.6",
-    "@types/lodash.merge": "^4.6.6",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "@types/to-px": "^1.1.0",

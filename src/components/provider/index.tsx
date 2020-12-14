@@ -1,5 +1,4 @@
 import React, { FunctionComponent } from 'react';
-import merge from 'lodash.merge';
 
 import { UNKNOWN_DEVICE_TYPE } from '../../constants';
 import {
@@ -26,7 +25,7 @@ export const GraceProvider: FunctionComponent<GraceProviderProps> = (props) => {
 
   if (isDevicesState(devicesOrDevicesState)) {
     // `devicesOrDevicesState` is DevicesState
-    devicesState = merge({}, devicesState, devicesOrDevicesState);
+    devicesState = Object.assign({}, devicesState, devicesOrDevicesState);
     devices = uniq(getDevices(initialConfigState).concat(keys(devicesState)));
   } else if (!isNil(devicesOrDevicesState)) {
     // `devicesOrDevicesState` is Device[]
