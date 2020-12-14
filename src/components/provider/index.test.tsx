@@ -17,6 +17,17 @@ import {
 import { GraceProvider } from './index';
 import { GraceProviderProps } from './types';
 
+const mockUseMediaQuery = (orientation: 'portrait' | 'landscape' | Orientation) => {
+  const addEventListener = jest.fn().mockImplementation();
+  const removeEventListener = jest.fn().mockImplementation();
+  window.matchMedia = jest.fn().mockImplementation((query: string) => ({
+    matches: query.includes(orientation),
+    media: query,
+    addEventListener,
+    removeEventListener
+  }));
+};
+
 const Component: FunctionComponent = () => {
   const [configState] = useConfigStore();
   const [globalState] = useGlobalStore();
@@ -29,6 +40,11 @@ const Component: FunctionComponent = () => {
 };
 
 describe('GraceProvider', () => {
+  beforeEach(() => {
+    jest.resetAllMocks();
+    mockUseMediaQuery('landscape');
+  });
+
   const expectProviderStateMatches = (props: {
     wrapper: ReactWrapper;
     configState?: ConfigState;
@@ -292,6 +308,52 @@ describe('GraceProvider', () => {
       breakpoints
     };
     expectProviderStateMatches({ wrapper, configState });
+  });
+
+  test('should return portrait orientation when window is portrait', () => {
+    // given
+    const component = <Component />;
+    const graceProviderProps: GraceProviderProps = {};
+    mockUseMediaQuery('portrait');
+
+    // when
+    const wrapper = mount(component, {
+      wrappingComponent: GraceProvider,
+      wrappingComponentProps: graceProviderProps
+    });
+
+    // then
+    const globalState: GlobalState = {
+      ...initialGlobalState,
+      window: {
+        ...initialGlobalState.window,
+        orientation: Orientation.Portait
+      }
+    };
+    expectProviderStateMatches({ wrapper, globalState });
+  });
+
+  test('should return landscape orientation when window is landscape', () => {
+    // given
+    const component = <Component />;
+    const graceProviderProps: GraceProviderProps = {};
+    mockUseMediaQuery('landscape');
+
+    // when
+    const wrapper = mount(component, {
+      wrappingComponent: GraceProvider,
+      wrappingComponentProps: graceProviderProps
+    });
+
+    // then
+    const globalState: GlobalState = {
+      ...initialGlobalState,
+      window: {
+        ...initialGlobalState.window,
+        orientation: Orientation.Landscape
+      }
+    };
+    expectProviderStateMatches({ wrapper, globalState });
   });
 
   test('should return initial state when window is undefined', () => {

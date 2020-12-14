@@ -9,8 +9,8 @@ export const initialGlobalState: GlobalState = {
     [UNKNOWN_DEVICE_TYPE]: true
   },
   window: {
-    width: '',
-    height: '',
-    orientation: Orientation.Portait
+    width: '1024px',
+    height: '768px',
+    orientation: Orientation.Landscape
   }
 };
