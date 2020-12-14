@@ -43,6 +43,8 @@ A library for gracefully rendering responsive React client or server side.
 npm install --save react-gracefully
 ```
 
+<hr>
+
 ## Usage
 
 ### `useGrace` hook
@@ -108,6 +110,8 @@ export const Page = () => {
   );
 };
 ```
+
+<hr>
 
 ### Components
 
@@ -187,6 +191,8 @@ export const App = () => {
 };
 ```
 
+<hr>
+
 ### Express Middleware
 
 #### Default (UserAgent)
@@ -221,6 +227,8 @@ const config: Config = {
 };
 app.use(grace.express(config));
 ```
+
+<hr>
 
 ## Copyright
 
