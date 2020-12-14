@@ -49,11 +49,11 @@ export interface HideProps {
    * @description
    * Optional orienation that should be hidden
    */
-  orientation?: Orientation;
+  orientation?: 'portrait' | 'landscape' | Orientation;
 }
 
 export interface HideStyleProps {
   breakpoints: Breakpoints;
   hiddenBreakpoints: string[];
-  hiddenOrientation?: Orientation;
+  hiddenOrientation?: 'portrait' | 'landscape' | Orientation;
 }
