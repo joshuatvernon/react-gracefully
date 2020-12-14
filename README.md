@@ -4,7 +4,12 @@
   <img src="https://user-images.githubusercontent.com/16813547/101833625-1bebd580-3aee-11eb-95b6-be06c2254207.png" alt="react-gracefully logo" height="150" />
 </p>
 
-<h1 align="center">react-gracefully</h1>
+<hr>
+<div align="center">
+  <h1 align="center">
+    react-gracefully
+  </h1>
+</div>
 
 <p align="center">
   <a href="https://www.npmjs.com/package/react-gracefully">
@@ -26,6 +31,9 @@
     <img src="https://snyk.io/test/github/joshuatvernon/react-gracefully/badge.svg" />
     <a/>
 </p>
+  
+<pre align="center">npm install --save react-gracefully</pre>
+<hr>
 
 A library for gracefully rendering responsive React client or server side.
 
