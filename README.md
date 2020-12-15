@@ -11,6 +11,7 @@
   <a href="https://www.npmjs.com/package/react-gracefully">
     <img src="https://img.shields.io/npm/v/react-gracefully.svg">
   </a>
+  <img src="https://badgen.net/npm/types/tslib">
   <a href="https://bundlephobia.com/result?p=react-gracefully">
     <img src="https://img.shields.io/bundlephobia/minzip/react-gracefully.svg" />
   </a>
