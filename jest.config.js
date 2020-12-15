@@ -9,7 +9,7 @@ module.exports = {
     'coverage',
     'node_modules',
     // Storybook
-    'src/utils/storybook',
+    'src/storybook.tsx',
     '.storybook',
     '.awcache'
   ],
