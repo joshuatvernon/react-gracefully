@@ -33,9 +33,18 @@
     "src/**/*.tsx"
   ],
   "exclude": [
+    "lib",
+    "badges",
+    "coverage",
     "node_modules",
+    // Tests
     "src/setupTests.ts",
     "src/**/*.test.ts",
-    "src/**/*.test.tsx"
+    "src/**/*.test.tsx",
+    // Storybook
+    ".awcache",
+    ".storybook",
+    "src/storybook.tsx",
+    "src/**/stories.tsx"
   ]
 }

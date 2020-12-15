@@ -1,9 +1,18 @@
 module.exports = {
   clearMocks: true,
   collectCoverage: true,
-  collectCoverageFrom: ['src/**/*.{ts,tsx}', '!**/*.d.ts', '!./*.js'],
+  collectCoverageFrom: ['src/**/*.{ts,tsx}', '!**/*.d.ts', '!./*.js', '!src/**/stories.tsx'],
   coverageDirectory: 'coverage',
-  coveragePathIgnorePatterns: ['node_modules', 'coverage', 'lib'],
+  coveragePathIgnorePatterns: [
+    'lib',
+    'badges',
+    'coverage',
+    'node_modules',
+    // Storybook
+    'src/storybook.tsx',
+    '.storybook',
+    '.awcache'
+  ],
   coverageReporters: ['json', 'json-summary', 'text', 'lcov'],
   coverageThreshold: {
     global: {
