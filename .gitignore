@@ -11,3 +11,5 @@ lib
 # Eslint
 .eslintcache
 
+# Storybook
+.awcache

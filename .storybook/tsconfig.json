@@ -1,0 +1,20 @@
+{
+    "extends": "../tsconfig.json",
+    "compilerOptions": {
+        "baseUrl": "./",
+        "rootDir": "../"
+    },
+    "include": [
+        "src/**/*.ts",
+        "src/**/*.tsx"
+    ],
+    "exclude": [
+        "lib",
+        "badges",
+        "coverage",
+        "node_modules",
+        "src/setupTests.ts",
+        "src/**/*.test.ts",
+        "src/**/*.test.tsx"
+    ]
+}
