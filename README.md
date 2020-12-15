@@ -1,4 +1,3 @@
-
 <p align="center">
   <img src="https://user-images.githubusercontent.com/16813547/101833625-1bebd580-3aee-11eb-95b6-be06c2254207.png" alt="react-gracefully logo" height="150" />
 </p>
@@ -52,7 +51,6 @@ npm install --save react-gracefully
 ```
 
 or
-
 
 ```sh
 yarn add react-gracefully
@@ -134,7 +132,7 @@ export const Page = () => {
 
 #### `Show` component
 
-The `Show` component can be used to show content for specific _breakpoints_ or _devices_. Since it uses media queries under the hood all content is returned from the server to the client and then hidden or shown using css. This means it can be used effectively in server side rendered apps such as [Next.js](https://github.com/vercel/next.js/).
+The `Show` component can be used to show content for specific _breakpoints_, _devices_ or window _orientation_. Since it uses media queries under the hood all content is returned from the server to the client and then hidden or shown using css. This means it can be used effectively in server side rendered apps such as [Next.js](https://github.com/vercel/next.js/).
 
 ```jsx
 import React from 'react';
@@ -143,10 +141,10 @@ import { Show } from 'react-gracefully';
 export const Page = () => {
   return (
     <div>
-      <Show show={['mobile']}>
+      <Show devices={['mobile']}>
         <h2>Mobile Title</h2>
       </Show>
-      <Show show={['tablet', 'desktop']}>
+      <Show devices={['tablet', 'desktop']}>
         <h1>Tablet or Desktop Title</h1>
       </Show>
     </div>
@@ -156,7 +154,7 @@ export const Page = () => {
 
 #### `Hide` component
 
-The `Hide` component can be used to hide content for specific _breakpoints_ or _devices_. Since it uses media queries under the hood all content is returned from the server to the client and then hidden or shown using css. This means it can be used effectively in server side rendered apps such as [Next.js](https://github.com/vercel/next.js/).
+The `Hide` component can be used to hide content for specific _breakpoints_, _devices_ or window _orientation_. Since it uses media queries under the hood all content is returned from the server to the client and then hidden or shown using css. This means it can be used effectively in server side rendered apps such as [Next.js](https://github.com/vercel/next.js/).
 
 ```jsx
 import React from 'react';
@@ -165,10 +163,10 @@ import { Hide } from 'react-gracefully';
 export const Page = () => {
   return (
     <div>
-      <Hide hide={['mobile']}>
+      <Hide devices={['mobile']}>
         <h1>Tablet or Desktop Title</h1>
       </Hide>
-      <Hide hide={['tablet', 'desktop']}>
+      <Hide devices={['tablet', 'desktop']}>
         <h2>Mobile Title</h2>
       </Hide>
     </div>
@@ -245,6 +243,6 @@ app.use(grace.express(config));
 
 <hr>
 
-## Copyright
+## Copyright 🦢
 
 [MIT](./LICENSE)
