@@ -368,9 +368,13 @@ const GraceSubscriber: FunctionComponent<{ setWindow: (window: WindowState) => v
   const { children, setWindow } = props;
 
   const { window } = useGrace();
+  const [prevWindow, setPrevWindow] = useState<WindowState>(window);
 
   useEffect(() => {
-    setWindow(window);
+    if (prevWindow.width !== window.width || prevWindow.height !== window.height) {
+      setWindow(window);
+      setPrevWindow(window);
+    }
   }, [window]);
 
   return <>{children}</>;
